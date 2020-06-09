@@ -1,0 +1,11 @@
+framework module NetworkLayer {
+  umbrella header "NetworkLayer.h"
+
+  export *
+  module * { export * }
+}
+
+module NetworkLayer.Swift {
+    header "NetworkLayer-Swift.h"
+    requires objc
+}

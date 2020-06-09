@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NetworkLayer
 
 class ViewController: UIViewController {
 
@@ -14,5 +15,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .blue
+        let provider = URLSessionProvider()
     }
 }

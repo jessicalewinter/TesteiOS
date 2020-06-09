@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093FE020248FCF7D0086E120 /* NetworkLayerTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 093FE01E248FCF7D0086E120 /* NetworkLayerTests.xctest */; };
+		093FE021248FCF800086E120 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093FE01D248FCF7D0086E120 /* NetworkLayer.framework */; };
+		093FE022248FCF800086E120 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 093FE01D248FCF7D0086E120 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		093FE027248FD0F80086E120 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE026248FD0F80086E120 /* NetworkRepository.swift */; };
+		093FE02A248FD5EE0086E120 /* FormFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE029248FD5EE0086E120 /* FormFormat.swift */; };
+		093FE02C248FD61C0086E120 /* Fund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE02B248FD61C0086E120 /* Fund.swift */; };
 		09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B22488ACF8006731C8 /* AppDelegate.swift */; };
 		09C433B72488ACF8006731C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B62488ACF8006731C8 /* ViewController.swift */; };
 		09C433BC2488AD01006731C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09C433BB2488AD01006731C8 /* Assets.xcassets */; };
@@ -32,7 +38,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		093FE016248FCEBF0086E120 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				093FE022248FCF800086E120 /* NetworkLayer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		093FE01D248FCF7D0086E120 /* NetworkLayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetworkLayer.framework; sourceTree = "<group>"; };
+		093FE01E248FCF7D0086E120 /* NetworkLayerTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkLayerTests.xctest; sourceTree = "<group>"; };
+		093FE026248FD0F80086E120 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
+		093FE029248FD5EE0086E120 /* FormFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFormat.swift; sourceTree = "<group>"; };
+		093FE02B248FD61C0086E120 /* Fund.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fund.swift; sourceTree = "<group>"; };
 		09C433AF2488ACF8006731C8 /* InvestmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvestmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C433B22488ACF8006731C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09C433B62488ACF8006731C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				093FE021248FCF800086E120 /* NetworkLayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +98,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		093FE023248FD0B80086E120 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				09C433B22488ACF8006731C8 /* AppDelegate.swift */,
+				09C433B62488ACF8006731C8 /* ViewController.swift */,
+				09C433BB2488AD01006731C8 /* Assets.xcassets */,
+				09C433BD2488AD01006731C8 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		093FE024248FD0DE0086E120 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				093FE025248FD0E50086E120 /* Protocols */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		093FE025248FD0E50086E120 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				093FE026248FD0F80086E120 /* NetworkRepository.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		093FE028248FD1230086E120 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				093FE029248FD5EE0086E120 /* FormFormat.swift */,
+				093FE02B248FD61C0086E120 /* Fund.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		09C433A62488ACF8006731C8 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +141,8 @@
 				09C433C82488AD02006731C8 /* InvestmentAppTests */,
 				09C433D32488AD02006731C8 /* InvestmentAppUITests */,
 				09C433B02488ACF8006731C8 /* Products */,
+				093FE01D248FCF7D0086E120 /* NetworkLayer.framework */,
+				093FE01E248FCF7D0086E120 /* NetworkLayerTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,10 +159,9 @@
 		09C433B12488ACF8006731C8 /* InvestmentApp */ = {
 			isa = PBXGroup;
 			children = (
-				09C433B22488ACF8006731C8 /* AppDelegate.swift */,
-				09C433B62488ACF8006731C8 /* ViewController.swift */,
-				09C433BB2488AD01006731C8 /* Assets.xcassets */,
-				09C433BD2488AD01006731C8 /* LaunchScreen.storyboard */,
+				093FE028248FD1230086E120 /* Models */,
+				093FE024248FD0DE0086E120 /* Utils */,
+				093FE023248FD0B80086E120 /* Resources */,
 				09C433C02488AD01006731C8 /* Info.plist */,
 			);
 			path = InvestmentApp;
@@ -133,6 +196,7 @@
 				09C433AC2488ACF8006731C8 /* Frameworks */,
 				09C433AD2488ACF8006731C8 /* Resources */,
 				09C433E22488AECE006731C8 /* ShellScript */,
+				093FE016248FCEBF0086E120 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				093FE020248FCF7D0086E120 /* NetworkLayerTests.xctest in Resources */,
 				09C433BF2488AD01006731C8 /* LaunchScreen.storyboard in Resources */,
 				09C433BC2488AD01006731C8 /* Assets.xcassets in Resources */,
 			);
@@ -273,8 +338,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				093FE027248FD0F80086E120 /* NetworkRepository.swift in Sources */,
 				09C433B72488ACF8006731C8 /* ViewController.swift in Sources */,
+				093FE02A248FD5EE0086E120 /* FormFormat.swift in Sources */,
 				09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */,
+				093FE02C248FD61C0086E120 /* Fund.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +509,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FG6BFSTBUF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = InvestmentApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -460,6 +532,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FG6BFSTBUF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = InvestmentApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -13,6 +13,8 @@
 		093FE027248FD0F80086E120 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE026248FD0F80086E120 /* NetworkRepository.swift */; };
 		093FE02A248FD5EE0086E120 /* FormFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE029248FD5EE0086E120 /* FormFormat.swift */; };
 		093FE02C248FD61C0086E120 /* Fund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE02B248FD61C0086E120 /* Fund.swift */; };
+		093FE02F248FD68B0086E120 /* InvestmentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE02E248FD68B0086E120 /* InvestmentRepository.swift */; };
+		093FE031248FD6BE0086E120 /* InvestmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE030248FD6BE0086E120 /* InvestmentService.swift */; };
 		09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B22488ACF8006731C8 /* AppDelegate.swift */; };
 		09C433B72488ACF8006731C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B62488ACF8006731C8 /* ViewController.swift */; };
 		09C433BC2488AD01006731C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09C433BB2488AD01006731C8 /* Assets.xcassets */; };
@@ -58,6 +60,8 @@
 		093FE026248FD0F80086E120 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
 		093FE029248FD5EE0086E120 /* FormFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFormat.swift; sourceTree = "<group>"; };
 		093FE02B248FD61C0086E120 /* Fund.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fund.swift; sourceTree = "<group>"; };
+		093FE02E248FD68B0086E120 /* InvestmentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentRepository.swift; sourceTree = "<group>"; };
+		093FE030248FD6BE0086E120 /* InvestmentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentService.swift; sourceTree = "<group>"; };
 		09C433AF2488ACF8006731C8 /* InvestmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvestmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C433B22488ACF8006731C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09C433B62488ACF8006731C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +138,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		093FE02D248FD66B0086E120 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				093FE02E248FD68B0086E120 /* InvestmentRepository.swift */,
+				093FE030248FD6BE0086E120 /* InvestmentService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		09C433A62488ACF8006731C8 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +172,7 @@
 		09C433B12488ACF8006731C8 /* InvestmentApp */ = {
 			isa = PBXGroup;
 			children = (
+				093FE02D248FD66B0086E120 /* Service */,
 				093FE028248FD1230086E120 /* Models */,
 				093FE024248FD0DE0086E120 /* Utils */,
 				093FE023248FD0B80086E120 /* Resources */,
@@ -340,8 +354,10 @@
 			files = (
 				093FE027248FD0F80086E120 /* NetworkRepository.swift in Sources */,
 				09C433B72488ACF8006731C8 /* ViewController.swift in Sources */,
+				093FE02F248FD68B0086E120 /* InvestmentRepository.swift in Sources */,
 				093FE02A248FD5EE0086E120 /* FormFormat.swift in Sources */,
 				09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */,
+				093FE031248FD6BE0086E120 /* InvestmentService.swift in Sources */,
 				093FE02C248FD61C0086E120 /* Fund.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

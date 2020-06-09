@@ -5,6 +5,7 @@
 //  Created by Jessica Lewinter on 09/06/20.
 //  Copyright © 2020 Jessica Lewinter. All rights reserved.
 //
+// swiftlint:disable identifier_name
 
 import Foundation
 

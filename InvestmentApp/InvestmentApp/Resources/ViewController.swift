@@ -15,6 +15,36 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .blue
-        let provider = URLSessionProvider()
+        testNetwork()
+    }
+    
+    func testNetwork() {
+        
+        InvestmentRepository.getForm { (result) in
+            
+            switch result {
+            case .success(let form):
+                print(form)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+        print("mama")
+    }
+    
+    func testNetwork2() {
+        
+        InvestmentRepository.getFund { (result) in
+            
+            switch result {
+            case .success(let form):
+                print(form)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+        print("mama")
     }
 }

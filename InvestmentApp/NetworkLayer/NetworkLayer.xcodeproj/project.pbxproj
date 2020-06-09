@@ -14,6 +14,12 @@
 		09E86CE2248F3B7E006D487C /* ParametersEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E86CE1248F3B7E006D487C /* ParametersEncoding.swift */; };
 		09E86CE4248F3BFD006D487C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E86CE3248F3BFD006D487C /* Task.swift */; };
 		09E86CE6248F3C7D006D487C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E86CE5248F3C7D006D487C /* NetworkError.swift */; };
+		09E86CE8248F40EC006D487C /* Encodable+asData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E86CE7248F40EC006D487C /* Encodable+asData.swift */; };
+		09E86CEA248F4147006D487C /* URLSession+dataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E86CE9248F4147006D487C /* URLSession+dataTask.swift */; };
+		09E86CEC248F416F006D487C /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E86CEB248F416F006D487C /* URLSessionProtocol.swift */; };
+		09E86CEE248F4184006D487C /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E86CED248F4184006D487C /* URLSessionDataTaskProtocol.swift */; };
+		09E86CF0248F419B006D487C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E86CEF248F419B006D487C /* Service.swift */; };
+		09E86CF2248F41B8006D487C /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E86CF1248F41B8006D487C /* Provider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +43,12 @@
 		09E86CE1248F3B7E006D487C /* ParametersEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersEncoding.swift; sourceTree = "<group>"; };
 		09E86CE3248F3BFD006D487C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		09E86CE5248F3C7D006D487C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		09E86CE7248F40EC006D487C /* Encodable+asData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+asData.swift"; sourceTree = "<group>"; };
+		09E86CE9248F4147006D487C /* URLSession+dataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+dataTask.swift"; sourceTree = "<group>"; };
+		09E86CEB248F416F006D487C /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		09E86CED248F4184006D487C /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
+		09E86CEF248F419B006D487C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		09E86CF1248F41B8006D487C /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +91,12 @@
 		09E86CC3248F3A18006D487C /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				09E86CDE248F3AAB006D487C /* Provider */,
-				09E86CDD248F3A7A006D487C /* Protocols */,
-				09E86CDC248F3A6E006D487C /* Extensions */,
 				09E86CDB248F3A64006D487C /* Enums */,
-				09E86CC4248F3A18006D487C /* NetworkLayer.h */,
+				09E86CDC248F3A6E006D487C /* Extensions */,
+				09E86CDD248F3A7A006D487C /* Protocols */,
+				09E86CDE248F3AAB006D487C /* Provider */,
 				09E86CC5248F3A18006D487C /* Info.plist */,
+				09E86CC4248F3A18006D487C /* NetworkLayer.h */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -112,6 +124,8 @@
 		09E86CDC248F3A6E006D487C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				09E86CE7248F40EC006D487C /* Encodable+asData.swift */,
+				09E86CE9248F4147006D487C /* URLSession+dataTask.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -119,6 +133,10 @@
 		09E86CDD248F3A7A006D487C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				09E86CEB248F416F006D487C /* URLSessionProtocol.swift */,
+				09E86CED248F4184006D487C /* URLSessionDataTaskProtocol.swift */,
+				09E86CEF248F419B006D487C /* Service.swift */,
+				09E86CF1248F41B8006D487C /* Provider.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -240,10 +258,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E86CEC248F416F006D487C /* URLSessionProtocol.swift in Sources */,
 				09E86CE2248F3B7E006D487C /* ParametersEncoding.swift in Sources */,
+				09E86CEE248F4184006D487C /* URLSessionDataTaskProtocol.swift in Sources */,
+				09E86CE8248F40EC006D487C /* Encodable+asData.swift in Sources */,
 				09E86CE6248F3C7D006D487C /* NetworkError.swift in Sources */,
+				09E86CF0248F419B006D487C /* Service.swift in Sources */,
 				09E86CE4248F3BFD006D487C /* Task.swift in Sources */,
 				09E86CE0248F3B5A006D487C /* HTTPMethod.swift in Sources */,
+				09E86CF2248F41B8006D487C /* Provider.swift in Sources */,
+				09E86CEA248F4147006D487C /* URLSession+dataTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

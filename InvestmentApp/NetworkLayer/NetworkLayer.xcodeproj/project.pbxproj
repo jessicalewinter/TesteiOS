@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093FE003248FC52C0086E120 /* ModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE002248FC52C0086E120 /* ModelMock.swift */; };
+		093FE005248FC5BD0086E120 /* ServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE004248FC5BD0086E120 /* ServiceMock.swift */; };
+		093FE007248FC5F80086E120 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE006248FC5F80086E120 /* URLSessionDataTaskMock.swift */; };
+		093FE009248FC7470086E120 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE008248FC7470086E120 /* URLSessionMock.swift */; };
+		093FE00B248FC7680086E120 /* WrongModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE00A248FC7680086E120 /* WrongModelMock.swift */; };
+		093FE00D248FC85E0086E120 /* result.json in Resources */ = {isa = PBXBuildFile; fileRef = 093FE00C248FC85E0086E120 /* result.json */; };
+		093FE00F248FC88C0086E120 /* URLSessionProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE00E248FC88C0086E120 /* URLSessionProviderTests.swift */; };
 		09E86CCB248F3A18006D487C /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E86CC1248F3A18006D487C /* NetworkLayer.framework */; };
-		09E86CD0248F3A18006D487C /* NetworkLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E86CCF248F3A18006D487C /* NetworkLayerTests.swift */; };
 		09E86CD2248F3A18006D487C /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E86CC4248F3A18006D487C /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E86CE0248F3B5A006D487C /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E86CDF248F3B5A006D487C /* HTTPMethod.swift */; };
 		09E86CE2248F3B7E006D487C /* ParametersEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E86CE1248F3B7E006D487C /* ParametersEncoding.swift */; };
@@ -36,11 +42,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		093FE002248FC52C0086E120 /* ModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMock.swift; sourceTree = "<group>"; };
+		093FE004248FC5BD0086E120 /* ServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMock.swift; sourceTree = "<group>"; };
+		093FE006248FC5F80086E120 /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
+		093FE008248FC7470086E120 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		093FE00A248FC7680086E120 /* WrongModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongModelMock.swift; sourceTree = "<group>"; };
+		093FE00C248FC85E0086E120 /* result.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = result.json; sourceTree = "<group>"; };
+		093FE00E248FC88C0086E120 /* URLSessionProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProviderTests.swift; sourceTree = "<group>"; };
 		09E86CC1248F3A18006D487C /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E86CC4248F3A18006D487C /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		09E86CC5248F3A18006D487C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E86CCA248F3A18006D487C /* NetworkLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		09E86CCF248F3A18006D487C /* NetworkLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerTests.swift; sourceTree = "<group>"; };
 		09E86CD1248F3A18006D487C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E86CDF248F3B5A006D487C /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		09E86CE1248F3B7E006D487C /* ParametersEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersEncoding.swift; sourceTree = "<group>"; };
@@ -76,6 +88,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		093FE001248FC5150086E120 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				093FE002248FC52C0086E120 /* ModelMock.swift */,
+				093FE004248FC5BD0086E120 /* ServiceMock.swift */,
+				093FE006248FC5F80086E120 /* URLSessionDataTaskMock.swift */,
+				093FE008248FC7470086E120 /* URLSessionMock.swift */,
+				093FE00A248FC7680086E120 /* WrongModelMock.swift */,
+				093FE00C248FC85E0086E120 /* result.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		09E86CB7248F3A18006D487C = {
 			isa = PBXGroup;
 			children = (
@@ -110,8 +135,9 @@
 		09E86CCE248F3A18006D487C /* NetworkLayerTests */ = {
 			isa = PBXGroup;
 			children = (
-				09E86CCF248F3A18006D487C /* NetworkLayerTests.swift */,
+				093FE001248FC5150086E120 /* Mocks */,
 				09E86CD1248F3A18006D487C /* Info.plist */,
+				093FE00E248FC88C0086E120 /* URLSessionProviderTests.swift */,
 			);
 			path = NetworkLayerTests;
 			sourceTree = "<group>";
@@ -257,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				093FE00D248FC85E0086E120 /* result.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +314,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E86CD0248F3A18006D487C /* NetworkLayerTests.swift in Sources */,
+				093FE009248FC7470086E120 /* URLSessionMock.swift in Sources */,
+				093FE00B248FC7680086E120 /* WrongModelMock.swift in Sources */,
+				093FE005248FC5BD0086E120 /* ServiceMock.swift in Sources */,
+				093FE007248FC5F80086E120 /* URLSessionDataTaskMock.swift in Sources */,
+				093FE00F248FC88C0086E120 /* URLSessionProviderTests.swift in Sources */,
+				093FE003248FC52C0086E120 /* ModelMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

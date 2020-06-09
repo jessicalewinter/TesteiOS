@@ -36,8 +36,8 @@ Temporary Items
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## Build generated
-**/build/
-**/DerivedData/
+build/
+DerivedData/
 
 ## Various settings
 *.pbxuser

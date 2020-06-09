@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0931312E249038FE004BCB76 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0931312D249038FE004BCB76 /* Identifiable.swift */; };
+		09313130249039C3004BCB76 /* Registrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0931312F249039C3004BCB76 /* Registrable.swift */; };
+		0931313224903A20004BCB76 /* UITableViewCell+automaticDequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0931313124903A20004BCB76 /* UITableViewCell+automaticDequeue.swift */; };
+		0931313424903A56004BCB76 /* UITableViewCell+automaticRegistrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0931313324903A56004BCB76 /* UITableViewCell+automaticRegistrable.swift */; };
 		093FE020248FCF7D0086E120 /* NetworkLayerTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 093FE01E248FCF7D0086E120 /* NetworkLayerTests.xctest */; };
 		093FE027248FD0F80086E120 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE026248FD0F80086E120 /* NetworkRepository.swift */; };
 		093FE02A248FD5EE0086E120 /* FormFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE029248FD5EE0086E120 /* FormFormat.swift */; };
@@ -25,8 +29,6 @@
 		093FE04624901E7A0086E120 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE04524901E7A0086E120 /* ViewCodable.swift */; };
 		093FE04824901ED20086E120 /* Dequeuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE04724901ED20086E120 /* Dequeuable.swift */; };
 		093FE04D2490203C0086E120 /* UIView+addSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE04C2490203C0086E120 /* UIView+addSubViews.swift */; };
-		093FE0512490271A0086E120 /* UITableViewCell+registerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE0502490271A0086E120 /* UITableViewCell+registerCell.swift */; };
-		093FE053249027C40086E120 /* UITableViewCell+automaticDequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE052249027C40086E120 /* UITableViewCell+automaticDequeue.swift */; };
 		0971B88E24902B350011C2DD /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093FE01D248FCF7D0086E120 /* NetworkLayer.framework */; };
 		0971B88F24902B350011C2DD /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 093FE01D248FCF7D0086E120 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B22488ACF8006731C8 /* AppDelegate.swift */; };
@@ -69,6 +71,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0931312D249038FE004BCB76 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		0931312F249039C3004BCB76 /* Registrable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registrable.swift; sourceTree = "<group>"; };
+		0931313124903A20004BCB76 /* UITableViewCell+automaticDequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+automaticDequeue.swift"; sourceTree = "<group>"; };
+		0931313324903A56004BCB76 /* UITableViewCell+automaticRegistrable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+automaticRegistrable.swift"; sourceTree = "<group>"; };
 		093FE01D248FCF7D0086E120 /* NetworkLayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetworkLayer.framework; sourceTree = "<group>"; };
 		093FE01E248FCF7D0086E120 /* NetworkLayerTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkLayerTests.xctest; sourceTree = "<group>"; };
 		093FE026248FD0F80086E120 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
@@ -88,8 +94,6 @@
 		093FE04524901E7A0086E120 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		093FE04724901ED20086E120 /* Dequeuable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dequeuable.swift; sourceTree = "<group>"; };
 		093FE04C2490203C0086E120 /* UIView+addSubViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addSubViews.swift"; sourceTree = "<group>"; };
-		093FE0502490271A0086E120 /* UITableViewCell+registerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+registerCell.swift"; sourceTree = "<group>"; };
-		093FE052249027C40086E120 /* UITableViewCell+automaticDequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+automaticDequeue.swift"; sourceTree = "<group>"; };
 		09C433AF2488ACF8006731C8 /* InvestmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvestmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C433B22488ACF8006731C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09C433B62488ACF8006731C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 				093FE026248FD0F80086E120 /* NetworkRepository.swift */,
 				093FE04524901E7A0086E120 /* ViewCodable.swift */,
 				093FE04724901ED20086E120 /* Dequeuable.swift */,
+				0931312D249038FE004BCB76 /* Identifiable.swift */,
+				0931312F249039C3004BCB76 /* Registrable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -197,8 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				093FE04C2490203C0086E120 /* UIView+addSubViews.swift */,
-				093FE0502490271A0086E120 /* UITableViewCell+registerCell.swift */,
-				093FE052249027C40086E120 /* UITableViewCell+automaticDequeue.swift */,
+				0931313124903A20004BCB76 /* UITableViewCell+automaticDequeue.swift */,
+				0931313324903A56004BCB76 /* UITableViewCell+automaticRegistrable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -419,18 +425,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				093FE053249027C40086E120 /* UITableViewCell+automaticDequeue.swift in Sources */,
 				093FE04824901ED20086E120 /* Dequeuable.swift in Sources */,
 				093FE027248FD0F80086E120 /* NetworkRepository.swift in Sources */,
+				0931313424903A56004BCB76 /* UITableViewCell+automaticRegistrable.swift in Sources */,
+				0931313224903A20004BCB76 /* UITableViewCell+automaticDequeue.swift in Sources */,
 				093FE04624901E7A0086E120 /* ViewCodable.swift in Sources */,
 				09C433B72488ACF8006731C8 /* ViewController.swift in Sources */,
+				09313130249039C3004BCB76 /* Registrable.swift in Sources */,
 				093FE02F248FD68B0086E120 /* InvestmentRepository.swift in Sources */,
 				093FE02A248FD5EE0086E120 /* FormFormat.swift in Sources */,
 				093FE04D2490203C0086E120 /* UIView+addSubViews.swift in Sources */,
 				09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */,
+				0931312E249038FE004BCB76 /* Identifiable.swift in Sources */,
 				093FE031248FD6BE0086E120 /* InvestmentService.swift in Sources */,
 				093FE02C248FD61C0086E120 /* Fund.swift in Sources */,
-				093FE0512490271A0086E120 /* UITableViewCell+registerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

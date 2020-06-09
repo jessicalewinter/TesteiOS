@@ -1,5 +1,5 @@
 //
-//  UITableViewCell+registerCell.swift
+//  UITableViewCell+automaticRegistrable.swift
 //  InvestmentApp
 //
 //  Created by Jessica Lewinter on 09/06/20.

@@ -15,6 +15,15 @@
 		093FE02C248FD61C0086E120 /* Fund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE02B248FD61C0086E120 /* Fund.swift */; };
 		093FE02F248FD68B0086E120 /* InvestmentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE02E248FD68B0086E120 /* InvestmentRepository.swift */; };
 		093FE031248FD6BE0086E120 /* InvestmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE030248FD6BE0086E120 /* InvestmentService.swift */; };
+		093FE03C249019530086E120 /* DINPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 093FE033249019510086E120 /* DINPro-Black.otf */; };
+		093FE03D249019530086E120 /* DINNeuzeitGroteskStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 093FE034249019510086E120 /* DINNeuzeitGroteskStd-Light.otf */; };
+		093FE03E249019530086E120 /* DINPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 093FE035249019510086E120 /* DINPro-Bold.otf */; };
+		093FE03F249019530086E120 /* DINMittelschriftStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 093FE036249019520086E120 /* DINMittelschriftStd.otf */; };
+		093FE040249019530086E120 /* DINNeuzeitGroteskStd-BdCond.otf in Resources */ = {isa = PBXBuildFile; fileRef = 093FE037249019520086E120 /* DINNeuzeitGroteskStd-BdCond.otf */; };
+		093FE041249019530086E120 /* DINPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 093FE038249019520086E120 /* DINPro-Regular.otf */; };
+		093FE042249019530086E120 /* DINEngschriftStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 093FE039249019520086E120 /* DINEngschriftStd.otf */; };
+		093FE043249019530086E120 /* DINPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 093FE03A249019520086E120 /* DINPro-Light.otf */; };
+		093FE044249019530086E120 /* DINPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 093FE03B249019520086E120 /* DINPro-Medium.otf */; };
 		09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B22488ACF8006731C8 /* AppDelegate.swift */; };
 		09C433B72488ACF8006731C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B62488ACF8006731C8 /* ViewController.swift */; };
 		09C433BC2488AD01006731C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09C433BB2488AD01006731C8 /* Assets.xcassets */; };
@@ -62,6 +71,15 @@
 		093FE02B248FD61C0086E120 /* Fund.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fund.swift; sourceTree = "<group>"; };
 		093FE02E248FD68B0086E120 /* InvestmentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentRepository.swift; sourceTree = "<group>"; };
 		093FE030248FD6BE0086E120 /* InvestmentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentService.swift; sourceTree = "<group>"; };
+		093FE033249019510086E120 /* DINPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Black.otf"; sourceTree = "<group>"; };
+		093FE034249019510086E120 /* DINNeuzeitGroteskStd-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINNeuzeitGroteskStd-Light.otf"; sourceTree = "<group>"; };
+		093FE035249019510086E120 /* DINPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Bold.otf"; sourceTree = "<group>"; };
+		093FE036249019520086E120 /* DINMittelschriftStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DINMittelschriftStd.otf; sourceTree = "<group>"; };
+		093FE037249019520086E120 /* DINNeuzeitGroteskStd-BdCond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINNeuzeitGroteskStd-BdCond.otf"; sourceTree = "<group>"; };
+		093FE038249019520086E120 /* DINPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Regular.otf"; sourceTree = "<group>"; };
+		093FE039249019520086E120 /* DINEngschriftStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DINEngschriftStd.otf; sourceTree = "<group>"; };
+		093FE03A249019520086E120 /* DINPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Light.otf"; sourceTree = "<group>"; };
+		093FE03B249019520086E120 /* DINPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Medium.otf"; sourceTree = "<group>"; };
 		09C433AF2488ACF8006731C8 /* InvestmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvestmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C433B22488ACF8006731C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09C433B62488ACF8006731C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +123,7 @@
 		093FE023248FD0B80086E120 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				093FE032249019370086E120 /* Fonts */,
 				09C433B22488ACF8006731C8 /* AppDelegate.swift */,
 				09C433B62488ACF8006731C8 /* ViewController.swift */,
 				09C433BB2488AD01006731C8 /* Assets.xcassets */,
@@ -145,6 +164,22 @@
 				093FE030248FD6BE0086E120 /* InvestmentService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		093FE032249019370086E120 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				093FE039249019520086E120 /* DINEngschriftStd.otf */,
+				093FE036249019520086E120 /* DINMittelschriftStd.otf */,
+				093FE037249019520086E120 /* DINNeuzeitGroteskStd-BdCond.otf */,
+				093FE034249019510086E120 /* DINNeuzeitGroteskStd-Light.otf */,
+				093FE033249019510086E120 /* DINPro-Black.otf */,
+				093FE035249019510086E120 /* DINPro-Bold.otf */,
+				093FE03A249019520086E120 /* DINPro-Light.otf */,
+				093FE03B249019520086E120 /* DINPro-Medium.otf */,
+				093FE038249019520086E120 /* DINPro-Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		09C433A62488ACF8006731C8 = {
@@ -306,8 +341,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				093FE020248FCF7D0086E120 /* NetworkLayerTests.xctest in Resources */,
+				093FE03C249019530086E120 /* DINPro-Black.otf in Resources */,
+				093FE03D249019530086E120 /* DINNeuzeitGroteskStd-Light.otf in Resources */,
+				093FE041249019530086E120 /* DINPro-Regular.otf in Resources */,
 				09C433BF2488AD01006731C8 /* LaunchScreen.storyboard in Resources */,
+				093FE03E249019530086E120 /* DINPro-Bold.otf in Resources */,
+				093FE043249019530086E120 /* DINPro-Light.otf in Resources */,
+				093FE042249019530086E120 /* DINEngschriftStd.otf in Resources */,
 				09C433BC2488AD01006731C8 /* Assets.xcassets in Resources */,
+				093FE040249019530086E120 /* DINNeuzeitGroteskStd-BdCond.otf in Resources */,
+				093FE044249019530086E120 /* DINPro-Medium.otf in Resources */,
+				093FE03F249019530086E120 /* DINMittelschriftStd.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

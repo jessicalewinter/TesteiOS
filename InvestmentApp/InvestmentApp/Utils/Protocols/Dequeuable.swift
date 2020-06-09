@@ -6,7 +6,7 @@
 //  Copyright © 2020 Jessica Lewinter. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol Dequeuable {
     associatedtype CellType
@@ -14,3 +14,21 @@ protocol Dequeuable {
     func dequeueReusableCell() -> CellType
     func dequeueReusableCell(for indexPath: IndexPath) -> CellType
 }
+
+protocol Registrable {
+    associatedtype CellType
+    
+    func registerCell(_ cellClass: CellType.Type)
+}
+
+protocol Identifiable {
+    static var reuseIdentifier: String { get }
+}
+
+extension Identifiable {
+    static var reuseIdentifier: String {
+        String(describing: Self.self)
+    }
+}
+
+extension UITableViewCell: Identifiable {}

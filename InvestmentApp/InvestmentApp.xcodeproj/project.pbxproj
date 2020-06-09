@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		093FE020248FCF7D0086E120 /* NetworkLayerTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 093FE01E248FCF7D0086E120 /* NetworkLayerTests.xctest */; };
-		093FE021248FCF800086E120 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093FE01D248FCF7D0086E120 /* NetworkLayer.framework */; };
-		093FE022248FCF800086E120 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 093FE01D248FCF7D0086E120 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		093FE027248FD0F80086E120 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE026248FD0F80086E120 /* NetworkRepository.swift */; };
 		093FE02A248FD5EE0086E120 /* FormFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE029248FD5EE0086E120 /* FormFormat.swift */; };
 		093FE02C248FD61C0086E120 /* Fund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE02B248FD61C0086E120 /* Fund.swift */; };
@@ -26,11 +24,11 @@
 		093FE044249019530086E120 /* DINPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 093FE03B249019520086E120 /* DINPro-Medium.otf */; };
 		093FE04624901E7A0086E120 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE04524901E7A0086E120 /* ViewCodable.swift */; };
 		093FE04824901ED20086E120 /* Dequeuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE04724901ED20086E120 /* Dequeuable.swift */; };
-		093FE04A24901EF40086E120 /* Registrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE04924901EF40086E120 /* Registrable.swift */; };
 		093FE04D2490203C0086E120 /* UIView+addSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE04C2490203C0086E120 /* UIView+addSubViews.swift */; };
-		093FE04F249026DA0086E120 /* UITableViewCell+reuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE04E249026DA0086E120 /* UITableViewCell+reuseIdentifier.swift */; };
 		093FE0512490271A0086E120 /* UITableViewCell+registerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE0502490271A0086E120 /* UITableViewCell+registerCell.swift */; };
 		093FE053249027C40086E120 /* UITableViewCell+automaticDequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE052249027C40086E120 /* UITableViewCell+automaticDequeue.swift */; };
+		0971B88E24902B350011C2DD /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093FE01D248FCF7D0086E120 /* NetworkLayer.framework */; };
+		0971B88F24902B350011C2DD /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 093FE01D248FCF7D0086E120 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B22488ACF8006731C8 /* AppDelegate.swift */; };
 		09C433B72488ACF8006731C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B62488ACF8006731C8 /* ViewController.swift */; };
 		09C433BC2488AD01006731C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09C433BB2488AD01006731C8 /* Assets.xcassets */; };
@@ -57,13 +55,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		093FE016248FCEBF0086E120 /* Embed Frameworks */ = {
+		0971B89024902B350011C2DD /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				093FE022248FCF800086E120 /* NetworkLayer.framework in Embed Frameworks */,
+				0971B88F24902B350011C2DD /* NetworkLayer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,9 +87,7 @@
 		093FE03B249019520086E120 /* DINPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Medium.otf"; sourceTree = "<group>"; };
 		093FE04524901E7A0086E120 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		093FE04724901ED20086E120 /* Dequeuable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dequeuable.swift; sourceTree = "<group>"; };
-		093FE04924901EF40086E120 /* Registrable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registrable.swift; sourceTree = "<group>"; };
 		093FE04C2490203C0086E120 /* UIView+addSubViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addSubViews.swift"; sourceTree = "<group>"; };
-		093FE04E249026DA0086E120 /* UITableViewCell+reuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+reuseIdentifier.swift"; sourceTree = "<group>"; };
 		093FE0502490271A0086E120 /* UITableViewCell+registerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+registerCell.swift"; sourceTree = "<group>"; };
 		093FE052249027C40086E120 /* UITableViewCell+automaticDequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+automaticDequeue.swift"; sourceTree = "<group>"; };
 		09C433AF2488ACF8006731C8 /* InvestmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvestmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				093FE021248FCF800086E120 /* NetworkLayer.framework in Frameworks */,
+				0971B88E24902B350011C2DD /* NetworkLayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +155,6 @@
 				093FE026248FD0F80086E120 /* NetworkRepository.swift */,
 				093FE04524901E7A0086E120 /* ViewCodable.swift */,
 				093FE04724901ED20086E120 /* Dequeuable.swift */,
-				093FE04924901EF40086E120 /* Registrable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -202,7 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				093FE04C2490203C0086E120 /* UIView+addSubViews.swift */,
-				093FE04E249026DA0086E120 /* UITableViewCell+reuseIdentifier.swift */,
 				093FE0502490271A0086E120 /* UITableViewCell+registerCell.swift */,
 				093FE052249027C40086E120 /* UITableViewCell+automaticDequeue.swift */,
 			);
@@ -274,7 +268,7 @@
 				09C433AC2488ACF8006731C8 /* Frameworks */,
 				09C433AD2488ACF8006731C8 /* Resources */,
 				09C433E22488AECE006731C8 /* ShellScript */,
-				093FE016248FCEBF0086E120 /* Embed Frameworks */,
+				0971B89024902B350011C2DD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -426,7 +420,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				093FE053249027C40086E120 /* UITableViewCell+automaticDequeue.swift in Sources */,
-				093FE04F249026DA0086E120 /* UITableViewCell+reuseIdentifier.swift in Sources */,
 				093FE04824901ED20086E120 /* Dequeuable.swift in Sources */,
 				093FE027248FD0F80086E120 /* NetworkRepository.swift in Sources */,
 				093FE04624901E7A0086E120 /* ViewCodable.swift in Sources */,
@@ -436,7 +429,6 @@
 				093FE04D2490203C0086E120 /* UIView+addSubViews.swift in Sources */,
 				09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */,
 				093FE031248FD6BE0086E120 /* InvestmentService.swift in Sources */,
-				093FE04A24901EF40086E120 /* Registrable.swift in Sources */,
 				093FE02C248FD61C0086E120 /* Fund.swift in Sources */,
 				093FE0512490271A0086E120 /* UITableViewCell+registerCell.swift in Sources */,
 			);

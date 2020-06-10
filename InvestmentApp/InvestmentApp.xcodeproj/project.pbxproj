@@ -11,6 +11,8 @@
 		09313130249039C3004BCB76 /* Registrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0931312F249039C3004BCB76 /* Registrable.swift */; };
 		0931313224903A20004BCB76 /* UITableViewCell+automaticDequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0931313124903A20004BCB76 /* UITableViewCell+automaticDequeue.swift */; };
 		0931313424903A56004BCB76 /* UITableViewCell+automaticRegistrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0931313324903A56004BCB76 /* UITableViewCell+automaticRegistrable.swift */; };
+		0931313624903D91004BCB76 /* UIFont+customFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0931313524903D91004BCB76 /* UIFont+customFonts.swift */; };
+		0931313824904F6E004BCB76 /* UIColor+convenienceInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0931313724904F6E004BCB76 /* UIColor+convenienceInit.swift */; };
 		093FE020248FCF7D0086E120 /* NetworkLayerTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 093FE01E248FCF7D0086E120 /* NetworkLayerTests.xctest */; };
 		093FE027248FD0F80086E120 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE026248FD0F80086E120 /* NetworkRepository.swift */; };
 		093FE02A248FD5EE0086E120 /* FormFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE029248FD5EE0086E120 /* FormFormat.swift */; };
@@ -37,6 +39,7 @@
 		09C433BF2488AD01006731C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09C433BD2488AD01006731C8 /* LaunchScreen.storyboard */; };
 		09C433CA2488AD02006731C8 /* InvestmentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433C92488AD02006731C8 /* InvestmentAppTests.swift */; };
 		09C433D52488AD02006731C8 /* InvestmentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433D42488AD02006731C8 /* InvestmentAppUITests.swift */; };
+		09F0D06524907795001A0E18 /* UIColor+actionColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D06424907795001A0E18 /* UIColor+actionColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,8 @@
 		0931312F249039C3004BCB76 /* Registrable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registrable.swift; sourceTree = "<group>"; };
 		0931313124903A20004BCB76 /* UITableViewCell+automaticDequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+automaticDequeue.swift"; sourceTree = "<group>"; };
 		0931313324903A56004BCB76 /* UITableViewCell+automaticRegistrable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+automaticRegistrable.swift"; sourceTree = "<group>"; };
+		0931313524903D91004BCB76 /* UIFont+customFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+customFonts.swift"; sourceTree = "<group>"; };
+		0931313724904F6E004BCB76 /* UIColor+convenienceInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+convenienceInit.swift"; sourceTree = "<group>"; };
 		093FE01D248FCF7D0086E120 /* NetworkLayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetworkLayer.framework; sourceTree = "<group>"; };
 		093FE01E248FCF7D0086E120 /* NetworkLayerTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkLayerTests.xctest; sourceTree = "<group>"; };
 		093FE026248FD0F80086E120 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
@@ -106,6 +111,7 @@
 		09C433D02488AD02006731C8 /* InvestmentAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvestmentAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C433D42488AD02006731C8 /* InvestmentAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentAppUITests.swift; sourceTree = "<group>"; };
 		09C433D62488AD02006731C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09F0D06424907795001A0E18 /* UIColor+actionColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+actionColors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +211,9 @@
 				093FE04C2490203C0086E120 /* UIView+addSubViews.swift */,
 				0931313124903A20004BCB76 /* UITableViewCell+automaticDequeue.swift */,
 				0931313324903A56004BCB76 /* UITableViewCell+automaticRegistrable.swift */,
+				0931313524903D91004BCB76 /* UIFont+customFonts.swift */,
+				0931313724904F6E004BCB76 /* UIColor+convenienceInit.swift */,
+				09F0D06424907795001A0E18 /* UIColor+actionColors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -430,10 +439,13 @@
 				0931313424903A56004BCB76 /* UITableViewCell+automaticRegistrable.swift in Sources */,
 				0931313224903A20004BCB76 /* UITableViewCell+automaticDequeue.swift in Sources */,
 				093FE04624901E7A0086E120 /* ViewCodable.swift in Sources */,
+				0931313624903D91004BCB76 /* UIFont+customFonts.swift in Sources */,
 				09C433B72488ACF8006731C8 /* ViewController.swift in Sources */,
 				09313130249039C3004BCB76 /* Registrable.swift in Sources */,
 				093FE02F248FD68B0086E120 /* InvestmentRepository.swift in Sources */,
 				093FE02A248FD5EE0086E120 /* FormFormat.swift in Sources */,
+				09F0D06524907795001A0E18 /* UIColor+actionColors.swift in Sources */,
+				0931313824904F6E004BCB76 /* UIColor+convenienceInit.swift in Sources */,
 				093FE04D2490203C0086E120 /* UIView+addSubViews.swift in Sources */,
 				09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */,
 				0931312E249038FE004BCB76 /* Identifiable.swift in Sources */,

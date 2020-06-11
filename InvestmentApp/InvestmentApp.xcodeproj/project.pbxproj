@@ -33,6 +33,7 @@
 		093FE04D2490203C0086E120 /* UIView+addSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE04C2490203C0086E120 /* UIView+addSubViews.swift */; };
 		0971B88E24902B350011C2DD /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093FE01D248FCF7D0086E120 /* NetworkLayer.framework */; };
 		0971B88F24902B350011C2DD /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 093FE01D248FCF7D0086E120 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		098551A12492D2BB005C0958 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098551A02492D2BB005C0958 /* DefaultViewController.swift */; };
 		09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B22488ACF8006731C8 /* AppDelegate.swift */; };
 		09C433B72488ACF8006731C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B62488ACF8006731C8 /* ViewController.swift */; };
 		09C433BC2488AD01006731C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09C433BB2488AD01006731C8 /* Assets.xcassets */; };
@@ -47,7 +48,7 @@
 		09F0D07C2491CBEC001A0E18 /* InvestmentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D07B2491CBEC001A0E18 /* InvestmentCoordinator.swift */; };
 		09F0D07E2491CBFA001A0E18 /* ContactCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D07D2491CBFA001A0E18 /* ContactCoordinator.swift */; };
 		09F0D0812491CF13001A0E18 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D0802491CF13001A0E18 /* TabBarCoordinator.swift */; };
-		09F0D0852491D5B0001A0E18 /* UITabBarController+customInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D0842491D5B0001A0E18 /* UITabBarController+customInit.swift */; };
+		09F0D0852491D5B0001A0E18 /* UITabBarController+selectedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D0842491D5B0001A0E18 /* UITabBarController+selectedImage.swift */; };
 		09F0D0882491E2D3001A0E18 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D0872491E2D3001A0E18 /* TabBarController.swift */; };
 		09F7E2F72492CB27006B45FA /* UIImage+imageWithColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F7E2F62492CB27006B45FA /* UIImage+imageWithColor.swift */; };
 /* End PBXBuildFile section */
@@ -109,6 +110,7 @@
 		093FE04524901E7A0086E120 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		093FE04724901ED20086E120 /* Dequeuable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dequeuable.swift; sourceTree = "<group>"; };
 		093FE04C2490203C0086E120 /* UIView+addSubViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addSubViews.swift"; sourceTree = "<group>"; };
+		098551A02492D2BB005C0958 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		09C433AF2488ACF8006731C8 /* InvestmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvestmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C433B22488ACF8006731C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09C433B62488ACF8006731C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,7 +131,7 @@
 		09F0D07B2491CBEC001A0E18 /* InvestmentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentCoordinator.swift; sourceTree = "<group>"; };
 		09F0D07D2491CBFA001A0E18 /* ContactCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCoordinator.swift; sourceTree = "<group>"; };
 		09F0D0802491CF13001A0E18 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
-		09F0D0842491D5B0001A0E18 /* UITabBarController+customInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+customInit.swift"; sourceTree = "<group>"; };
+		09F0D0842491D5B0001A0E18 /* UITabBarController+selectedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+selectedImage.swift"; sourceTree = "<group>"; };
 		09F0D0872491E2D3001A0E18 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		09F7E2F62492CB27006B45FA /* UIImage+imageWithColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+imageWithColor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -234,10 +236,18 @@
 				0931313524903D91004BCB76 /* UIFont+customFonts.swift */,
 				0931313724904F6E004BCB76 /* UIColor+convenienceInit.swift */,
 				09F0D06424907795001A0E18 /* UIColor+actionColors.swift */,
-				09F0D0842491D5B0001A0E18 /* UITabBarController+customInit.swift */,
+				09F0D0842491D5B0001A0E18 /* UITabBarController+selectedImage.swift */,
 				09F7E2F62492CB27006B45FA /* UIImage+imageWithColor.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0985519F2492D2A2005C0958 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				098551A02492D2BB005C0958 /* DefaultViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		09C433A62488ACF8006731C8 = {
@@ -311,6 +321,7 @@
 		09F0D06B249157FA001A0E18 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				0985519F2492D2A2005C0958 /* ViewController */,
 				09F0D0862491E2C4001A0E18 /* TabBar */,
 				09F0D06C24915811001A0E18 /* Screens */,
 			);
@@ -569,8 +580,9 @@
 				09F0D07C2491CBEC001A0E18 /* InvestmentCoordinator.swift in Sources */,
 				093FE02A248FD5EE0086E120 /* FormFormat.swift in Sources */,
 				09F0D06524907795001A0E18 /* UIColor+actionColors.swift in Sources */,
+				098551A12492D2BB005C0958 /* DefaultViewController.swift in Sources */,
 				0931313824904F6E004BCB76 /* UIColor+convenienceInit.swift in Sources */,
-				09F0D0852491D5B0001A0E18 /* UITabBarController+customInit.swift in Sources */,
+				09F0D0852491D5B0001A0E18 /* UITabBarController+selectedImage.swift in Sources */,
 				093FE04D2490203C0086E120 /* UIView+addSubViews.swift in Sources */,
 				09F7E2F72492CB27006B45FA /* UIImage+imageWithColor.swift in Sources */,
 				09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */,

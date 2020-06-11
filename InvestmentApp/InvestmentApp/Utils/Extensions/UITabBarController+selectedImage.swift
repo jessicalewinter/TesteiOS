@@ -1,10 +1,10 @@
 //
-//  UITabBarController+customInit.swift
+//  UITabBarController+selectedImage.swift
 //  InvestmentApp
 //
 //  Created by Jessica Lewinter on 11/06/20.
 //  Copyright © 2020 Jessica Lewinter. All rights reserved.
-//
+//  
 
 import UIKit
 
@@ -20,7 +20,7 @@ extension UITabBarController {
         self.tabBar.layer.shadowRadius = 10
         self.tabBar.layer.shadowOpacity = 1
         self.tabBar.layer.masksToBounds = false
-//
+
         UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -16)
         
         UITabBarItem.appearance().setTitleTextAttributes([

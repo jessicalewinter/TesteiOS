@@ -18,11 +18,10 @@ class AppCoordinator: Coordinator {
     func start() {
         let navigationController = UINavigationController()
         window.rootViewController = navigationController
-        window.makeKeyAndVisible()
-        
-        let initialCoordinator = InitialCoordinator(navigationController: navigationController)
-        coordinate(to: initialCoordinator)
+        window.makeKeyAndVisible()        
+
+        let tabBarCoordinator = TabBarCoordinator(navigationController: navigationController)
+        coordinate(to: tabBarCoordinator)
     }
-    
-    
+        
 }

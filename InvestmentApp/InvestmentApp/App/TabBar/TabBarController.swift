@@ -10,4 +10,10 @@ import UIKit
 
 class TabBarController: UITabBarController {
     var coordinator: Coordinator?
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.tabBar.invalidateIntrinsicContentSize()
+        self.selectedImage(with: .tabBarSelected)
+    }
 }

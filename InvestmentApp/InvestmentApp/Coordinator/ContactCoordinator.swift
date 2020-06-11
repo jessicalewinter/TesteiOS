@@ -16,6 +16,7 @@ class ContactCoordinator: Coordinator {
     }
     
     func start() {
-        
+        let contactViewController = ContactViewController()
+        navigationController.pushViewController(contactViewController, animated: false)
     }
 }

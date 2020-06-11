@@ -16,6 +16,7 @@ class InvestmentCoordinator: Coordinator {
     }
     
     func start() {
-        
+        let investmentViewController = InvestmentViewController()
+        navigationController.pushViewController(investmentViewController, animated: false)
     }
 }

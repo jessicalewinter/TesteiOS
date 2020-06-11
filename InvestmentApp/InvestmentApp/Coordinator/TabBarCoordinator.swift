@@ -17,21 +17,21 @@ class TabBarCoordinator: Coordinator {
     }
     
     func start() {
-        let tabBarController = TabBarController(withShadow: true)
+        let tabBarController = TabBarController()
         tabBarController.coordinator = self
         
         let investmentNavigationController = UINavigationController()
-        investmentNavigationController.tabBarItem = UITabBarItem(title: "Investment", image: nil, tag: 0)
+        investmentNavigationController.tabBarItem = UITabBarItem(title: "Investimento", image: nil, tag: 0)
         let investmentCoordinator = InvestmentCoordinator(navigationController: investmentNavigationController)
         
         let contactNavigationController = UINavigationController()
-        contactNavigationController.tabBarItem = UITabBarItem(title: "contact", image: nil, tag: 1)
+        contactNavigationController.tabBarItem = UITabBarItem(title: "Contato", image: nil, tag: 1)
         let contactCoordinator = ContactCoordinator(navigationController: contactNavigationController)
         
         tabBarController.viewControllers = [investmentNavigationController, contactNavigationController]
         
-        tabBarController.modalPresentationStyle = .fullScreen
-        navigationController.present(tabBarController, animated: true, completion: nil)
+        tabBarController.modalPresentationStyle = .overFullScreen
+        navigationController.present(tabBarController, animated: false, completion: nil)
         
         coordinate(to: investmentCoordinator)
         coordinate(to: contactCoordinator)

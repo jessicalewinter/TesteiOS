@@ -40,6 +40,16 @@
 		09C433CA2488AD02006731C8 /* InvestmentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433C92488AD02006731C8 /* InvestmentAppTests.swift */; };
 		09C433D52488AD02006731C8 /* InvestmentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433D42488AD02006731C8 /* InvestmentAppUITests.swift */; };
 		09F0D06524907795001A0E18 /* UIColor+actionColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D06424907795001A0E18 /* UIColor+actionColors.swift */; };
+		09F0D068249150C6001A0E18 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D067249150C6001A0E18 /* Coordinator.swift */; };
+		09F0D06A249150D0001A0E18 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D069249150D0001A0E18 /* AppCoordinator.swift */; };
+		09F0D07024915C40001A0E18 /* InitialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D06F24915C40001A0E18 /* InitialCoordinator.swift */; };
+		09F0D07424916C59001A0E18 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D07324916C59001A0E18 /* ContactViewController.swift */; };
+		09F0D0792491CB67001A0E18 /* InvestmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D0782491CB67001A0E18 /* InvestmentViewController.swift */; };
+		09F0D07C2491CBEC001A0E18 /* InvestmentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D07B2491CBEC001A0E18 /* InvestmentCoordinator.swift */; };
+		09F0D07E2491CBFA001A0E18 /* ContactCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D07D2491CBFA001A0E18 /* ContactCoordinator.swift */; };
+		09F0D0812491CF13001A0E18 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D0802491CF13001A0E18 /* TabBarCoordinator.swift */; };
+		09F0D0852491D5B0001A0E18 /* UITabBarController+customInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D0842491D5B0001A0E18 /* UITabBarController+customInit.swift */; };
+		09F0D0882491E2D3001A0E18 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D0872491E2D3001A0E18 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +122,16 @@
 		09C433D42488AD02006731C8 /* InvestmentAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentAppUITests.swift; sourceTree = "<group>"; };
 		09C433D62488AD02006731C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09F0D06424907795001A0E18 /* UIColor+actionColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+actionColors.swift"; sourceTree = "<group>"; };
+		09F0D067249150C6001A0E18 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		09F0D069249150D0001A0E18 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		09F0D06F24915C40001A0E18 /* InitialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialCoordinator.swift; sourceTree = "<group>"; };
+		09F0D07324916C59001A0E18 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		09F0D0782491CB67001A0E18 /* InvestmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentViewController.swift; sourceTree = "<group>"; };
+		09F0D07B2491CBEC001A0E18 /* InvestmentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentCoordinator.swift; sourceTree = "<group>"; };
+		09F0D07D2491CBFA001A0E18 /* ContactCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCoordinator.swift; sourceTree = "<group>"; };
+		09F0D0802491CF13001A0E18 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		09F0D0842491D5B0001A0E18 /* UITabBarController+customInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+customInit.swift"; sourceTree = "<group>"; };
+		09F0D0872491E2D3001A0E18 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +234,7 @@
 				0931313524903D91004BCB76 /* UIFont+customFonts.swift */,
 				0931313724904F6E004BCB76 /* UIColor+convenienceInit.swift */,
 				09F0D06424907795001A0E18 /* UIColor+actionColors.swift */,
+				09F0D0842491D5B0001A0E18 /* UITabBarController+customInit.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -243,6 +264,8 @@
 		09C433B12488ACF8006731C8 /* InvestmentApp */ = {
 			isa = PBXGroup;
 			children = (
+				09F0D06B249157FA001A0E18 /* App */,
+				09F0D06624915075001A0E18 /* Coordinator */,
 				093FE02D248FD66B0086E120 /* Service */,
 				093FE028248FD1230086E120 /* Models */,
 				093FE024248FD0DE0086E120 /* Utils */,
@@ -270,6 +293,101 @@
 				09C433D62488AD02006731C8 /* Info.plist */,
 			);
 			path = InvestmentAppUITests;
+			sourceTree = "<group>";
+		};
+		09F0D06624915075001A0E18 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				09F0D067249150C6001A0E18 /* Coordinator.swift */,
+				09F0D069249150D0001A0E18 /* AppCoordinator.swift */,
+				09F0D06F24915C40001A0E18 /* InitialCoordinator.swift */,
+				09F0D07B2491CBEC001A0E18 /* InvestmentCoordinator.swift */,
+				09F0D07D2491CBFA001A0E18 /* ContactCoordinator.swift */,
+				09F0D0802491CF13001A0E18 /* TabBarCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		09F0D06B249157FA001A0E18 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				09F0D0862491E2C4001A0E18 /* TabBar */,
+				09F0D06C24915811001A0E18 /* Screens */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		09F0D06C24915811001A0E18 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				09F0D06E24915827001A0E18 /* Contact */,
+				09F0D06D2491581F001A0E18 /* Investment */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		09F0D06D2491581F001A0E18 /* Investment */ = {
+			isa = PBXGroup;
+			children = (
+				09F0D0772491CB4B001A0E18 /* ViewModels */,
+				09F0D07624916C8F001A0E18 /* Views */,
+			);
+			path = Investment;
+			sourceTree = "<group>";
+		};
+		09F0D06E24915827001A0E18 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				09F0D07524916C7C001A0E18 /* ViewModels */,
+				09F0D07224916C30001A0E18 /* Views */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		09F0D07124916C22001A0E18 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				09F0D07324916C59001A0E18 /* ContactViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		09F0D07224916C30001A0E18 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				09F0D07124916C22001A0E18 /* ViewController */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		09F0D07524916C7C001A0E18 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		09F0D07624916C8F001A0E18 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				09F0D0782491CB67001A0E18 /* InvestmentViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		09F0D0772491CB4B001A0E18 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		09F0D0862491E2C4001A0E18 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				09F0D0872491E2D3001A0E18 /* TabBarController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,17 +555,27 @@
 				093FE04824901ED20086E120 /* Dequeuable.swift in Sources */,
 				093FE027248FD0F80086E120 /* NetworkRepository.swift in Sources */,
 				0931313424903A56004BCB76 /* UITableViewCell+automaticRegistrable.swift in Sources */,
+				09F0D0882491E2D3001A0E18 /* TabBarController.swift in Sources */,
+				09F0D0812491CF13001A0E18 /* TabBarCoordinator.swift in Sources */,
 				0931313224903A20004BCB76 /* UITableViewCell+automaticDequeue.swift in Sources */,
 				093FE04624901E7A0086E120 /* ViewCodable.swift in Sources */,
 				0931313624903D91004BCB76 /* UIFont+customFonts.swift in Sources */,
 				09C433B72488ACF8006731C8 /* ViewController.swift in Sources */,
 				09313130249039C3004BCB76 /* Registrable.swift in Sources */,
+				09F0D07424916C59001A0E18 /* ContactViewController.swift in Sources */,
+				09F0D0792491CB67001A0E18 /* InvestmentViewController.swift in Sources */,
+				09F0D068249150C6001A0E18 /* Coordinator.swift in Sources */,
 				093FE02F248FD68B0086E120 /* InvestmentRepository.swift in Sources */,
+				09F0D07C2491CBEC001A0E18 /* InvestmentCoordinator.swift in Sources */,
 				093FE02A248FD5EE0086E120 /* FormFormat.swift in Sources */,
 				09F0D06524907795001A0E18 /* UIColor+actionColors.swift in Sources */,
 				0931313824904F6E004BCB76 /* UIColor+convenienceInit.swift in Sources */,
+				09F0D07024915C40001A0E18 /* InitialCoordinator.swift in Sources */,
+				09F0D0852491D5B0001A0E18 /* UITabBarController+customInit.swift in Sources */,
 				093FE04D2490203C0086E120 /* UIView+addSubViews.swift in Sources */,
 				09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */,
+				09F0D07E2491CBFA001A0E18 /* ContactCoordinator.swift in Sources */,
+				09F0D06A249150D0001A0E18 /* AppCoordinator.swift in Sources */,
 				0931312E249038FE004BCB76 /* Identifiable.swift in Sources */,
 				093FE031248FD6BE0086E120 /* InvestmentService.swift in Sources */,
 				093FE02C248FD61C0086E120 /* Fund.swift in Sources */,

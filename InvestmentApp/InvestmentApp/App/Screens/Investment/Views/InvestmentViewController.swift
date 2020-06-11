@@ -12,7 +12,8 @@ class InvestmentViewController: DefaultViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
+        view.backgroundColor = .white
+        title = "Investimento"
         // Do any additional setup after loading the view.
     }
 

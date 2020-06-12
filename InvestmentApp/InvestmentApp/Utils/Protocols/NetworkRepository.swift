@@ -9,6 +9,6 @@
 import Foundation
 
 protocol NetworkRepository {
-    static func getForm(completion: @escaping ((Result<FormFormat, Error>) -> Void))
+    static func getForm(completion: @escaping ((Result<Form, Error>) -> Void))
     static func getFund(completion: @escaping ((Result<Fund, Error>) -> Void))
 }

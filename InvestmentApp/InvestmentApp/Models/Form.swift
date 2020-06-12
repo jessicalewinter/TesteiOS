@@ -1,5 +1,5 @@
 //
-//  FormFormat.swift
+//  Form.swift
 //  InvestmentApp
 //
 //  Created by Jessica Lewinter on 09/06/20.
@@ -9,7 +9,7 @@
 
 import Foundation
 
-struct FormFormat: Decodable {
+struct Form: Decodable {
     let cells: [Cell]?
 }
 

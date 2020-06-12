@@ -15,7 +15,7 @@
 		0931313824904F6E004BCB76 /* UIColor+convenienceInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0931313724904F6E004BCB76 /* UIColor+convenienceInit.swift */; };
 		093FE020248FCF7D0086E120 /* NetworkLayerTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 093FE01E248FCF7D0086E120 /* NetworkLayerTests.xctest */; };
 		093FE027248FD0F80086E120 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE026248FD0F80086E120 /* NetworkRepository.swift */; };
-		093FE02A248FD5EE0086E120 /* FormFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE029248FD5EE0086E120 /* FormFormat.swift */; };
+		093FE02A248FD5EE0086E120 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE029248FD5EE0086E120 /* Form.swift */; };
 		093FE02C248FD61C0086E120 /* Fund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE02B248FD61C0086E120 /* Fund.swift */; };
 		093FE02F248FD68B0086E120 /* InvestmentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE02E248FD68B0086E120 /* InvestmentRepository.swift */; };
 		093FE031248FD6BE0086E120 /* InvestmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE030248FD6BE0086E120 /* InvestmentService.swift */; };
@@ -31,6 +31,9 @@
 		093FE04624901E7A0086E120 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE04524901E7A0086E120 /* ViewCodable.swift */; };
 		093FE04824901ED20086E120 /* Dequeuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE04724901ED20086E120 /* Dequeuable.swift */; };
 		093FE04D2490203C0086E120 /* UIView+addSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE04C2490203C0086E120 /* UIView+addSubViews.swift */; };
+		094A7AEB249323BB00A3CEB2 /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7AEA249323BB00A3CEB2 /* ErrorAlert.swift */; };
+		094A7AED2493295900A3CEB2 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7AEC2493295900A3CEB2 /* ContactView.swift */; };
+		094A7AEF2493350800A3CEB2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7AEE2493350800A3CEB2 /* Bindable.swift */; };
 		0971B88E24902B350011C2DD /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093FE01D248FCF7D0086E120 /* NetworkLayer.framework */; };
 		0971B88F24902B350011C2DD /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 093FE01D248FCF7D0086E120 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		098551A12492D2BB005C0958 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098551A02492D2BB005C0958 /* DefaultViewController.swift */; };
@@ -43,6 +46,7 @@
 		09C64F1C2492E59800D7FF28 /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C64F1B2492E59800D7FF28 /* FloatingTextField.swift */; };
 		09C64F1E2492E78800D7FF28 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C64F1D2492E78800D7FF28 /* UITextField+fixCaretPosition.swift */; };
 		09C64F212492F84F00D7FF28 /* ValidationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C64F202492F84F00D7FF28 /* ValidationForm.swift */; };
+		09C64F2324931DB300D7FF28 /* ContactFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C64F2224931DB300D7FF28 /* ContactFormViewModel.swift */; };
 		09F0D06524907795001A0E18 /* UIColor+actionColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D06424907795001A0E18 /* UIColor+actionColors.swift */; };
 		09F0D068249150C6001A0E18 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D067249150C6001A0E18 /* Coordinator.swift */; };
 		09F0D06A249150D0001A0E18 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D069249150D0001A0E18 /* AppCoordinator.swift */; };
@@ -97,7 +101,7 @@
 		093FE01D248FCF7D0086E120 /* NetworkLayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetworkLayer.framework; sourceTree = "<group>"; };
 		093FE01E248FCF7D0086E120 /* NetworkLayerTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkLayerTests.xctest; sourceTree = "<group>"; };
 		093FE026248FD0F80086E120 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
-		093FE029248FD5EE0086E120 /* FormFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFormat.swift; sourceTree = "<group>"; };
+		093FE029248FD5EE0086E120 /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		093FE02B248FD61C0086E120 /* Fund.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fund.swift; sourceTree = "<group>"; };
 		093FE02E248FD68B0086E120 /* InvestmentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentRepository.swift; sourceTree = "<group>"; };
 		093FE030248FD6BE0086E120 /* InvestmentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentService.swift; sourceTree = "<group>"; };
@@ -113,6 +117,9 @@
 		093FE04524901E7A0086E120 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		093FE04724901ED20086E120 /* Dequeuable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dequeuable.swift; sourceTree = "<group>"; };
 		093FE04C2490203C0086E120 /* UIView+addSubViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addSubViews.swift"; sourceTree = "<group>"; };
+		094A7AEA249323BB00A3CEB2 /* ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
+		094A7AEC2493295900A3CEB2 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
+		094A7AEE2493350800A3CEB2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		098551A02492D2BB005C0958 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		09C433AF2488ACF8006731C8 /* InvestmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvestmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C433B22488ACF8006731C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +136,7 @@
 		09C64F1B2492E59800D7FF28 /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		09C64F1D2492E78800D7FF28 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
 		09C64F202492F84F00D7FF28 /* ValidationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationForm.swift; sourceTree = "<group>"; };
+		09C64F2224931DB300D7FF28 /* ContactFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModel.swift; sourceTree = "<group>"; };
 		09F0D06424907795001A0E18 /* UIColor+actionColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+actionColors.swift"; sourceTree = "<group>"; };
 		09F0D067249150C6001A0E18 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		09F0D069249150D0001A0E18 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -181,6 +189,7 @@
 		093FE024248FD0DE0086E120 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				094A7AE9249323AA00A3CEB2 /* Enums */,
 				09C64F1F2492F82E00D7FF28 /* RegexValidation */,
 				093FE04B24901F100086E120 /* Extensions */,
 				093FE025248FD0E50086E120 /* Protocols */,
@@ -196,6 +205,7 @@
 				093FE04724901ED20086E120 /* Dequeuable.swift */,
 				0931312D249038FE004BCB76 /* Identifiable.swift */,
 				0931312F249039C3004BCB76 /* Registrable.swift */,
+				094A7AEE2493350800A3CEB2 /* Bindable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -203,7 +213,7 @@
 		093FE028248FD1230086E120 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				093FE029248FD5EE0086E120 /* FormFormat.swift */,
+				093FE029248FD5EE0086E120 /* Form.swift */,
 				093FE02B248FD61C0086E120 /* Fund.swift */,
 			);
 			path = Models;
@@ -248,6 +258,14 @@
 				09C64F1D2492E78800D7FF28 /* UITextField+fixCaretPosition.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		094A7AE9249323AA00A3CEB2 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				094A7AEA249323BB00A3CEB2 /* ErrorAlert.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		0985519F2492D2A2005C0958 /* ViewController */ = {
@@ -391,6 +409,7 @@
 		09F0D07224916C30001A0E18 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				094A7AEC2493295900A3CEB2 /* ContactView.swift */,
 				09F0D07124916C22001A0E18 /* ViewController */,
 			);
 			path = Views;
@@ -399,6 +418,7 @@
 		09F0D07524916C7C001A0E18 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				09C64F2224931DB300D7FF28 /* ContactFormViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -589,8 +609,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				09C64F1E2492E78800D7FF28 /* UITextField+fixCaretPosition.swift in Sources */,
+				09C64F2324931DB300D7FF28 /* ContactFormViewModel.swift in Sources */,
 				093FE04824901ED20086E120 /* Dequeuable.swift in Sources */,
 				093FE027248FD0F80086E120 /* NetworkRepository.swift in Sources */,
+				094A7AEB249323BB00A3CEB2 /* ErrorAlert.swift in Sources */,
 				0931313424903A56004BCB76 /* UITableViewCell+automaticRegistrable.swift in Sources */,
 				09F0D0882491E2D3001A0E18 /* TabBarController.swift in Sources */,
 				09F0D0812491CF13001A0E18 /* TabBarCoordinator.swift in Sources */,
@@ -601,11 +623,12 @@
 				09C433B72488ACF8006731C8 /* ViewController.swift in Sources */,
 				09313130249039C3004BCB76 /* Registrable.swift in Sources */,
 				09F0D07424916C59001A0E18 /* ContactViewController.swift in Sources */,
+				094A7AEF2493350800A3CEB2 /* Bindable.swift in Sources */,
 				09F0D0792491CB67001A0E18 /* InvestmentViewController.swift in Sources */,
 				09F0D068249150C6001A0E18 /* Coordinator.swift in Sources */,
 				093FE02F248FD68B0086E120 /* InvestmentRepository.swift in Sources */,
 				09F0D07C2491CBEC001A0E18 /* InvestmentCoordinator.swift in Sources */,
-				093FE02A248FD5EE0086E120 /* FormFormat.swift in Sources */,
+				093FE02A248FD5EE0086E120 /* Form.swift in Sources */,
 				09F0D06524907795001A0E18 /* UIColor+actionColors.swift in Sources */,
 				09C64F212492F84F00D7FF28 /* ValidationForm.swift in Sources */,
 				098551A12492D2BB005C0958 /* DefaultViewController.swift in Sources */,
@@ -613,6 +636,7 @@
 				09F0D0852491D5B0001A0E18 /* UITabBarController+selectedImage.swift in Sources */,
 				093FE04D2490203C0086E120 /* UIView+addSubViews.swift in Sources */,
 				09F7E2F72492CB27006B45FA /* UIImage+imageWithColor.swift in Sources */,
+				094A7AED2493295900A3CEB2 /* ContactView.swift in Sources */,
 				09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */,
 				09F0D07E2491CBFA001A0E18 /* ContactCoordinator.swift in Sources */,
 				09F0D06A249150D0001A0E18 /* AppCoordinator.swift in Sources */,

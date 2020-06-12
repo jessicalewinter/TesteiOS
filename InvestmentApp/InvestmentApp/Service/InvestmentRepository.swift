@@ -11,10 +11,9 @@ import NetworkLayer
 
 public class InvestmentRepository: NetworkRepository {
     
-    static func getForm(completion: @escaping ((Result<FormFormat, Error>) -> Void)) {
+    static func getForm(completion: @escaping ((Result<Form, Error>) -> Void)) {
         let sessionProvider = URLSessionProvider()
-        sessionProvider.request(type: FormFormat.self, service: InvestmentService.getForm) { (result) in
-            
+        sessionProvider.request(type: Form.self, service: InvestmentService.getForm) { (result) in
             switch result {
             case .success(let form):
                 completion(.success(form))

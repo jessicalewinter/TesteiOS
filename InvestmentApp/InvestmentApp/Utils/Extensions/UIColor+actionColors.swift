@@ -18,5 +18,7 @@ extension UIColor {
     static let risk3 = UIColor(withRed: 255, green: 192, blue: 17, alpha: 1)
     static let risk4 = UIColor(withRed: 255, green: 116, blue: 44, alpha: 1)
     static let risk5 = UIColor(withRed: 255, green: 54, blue: 52, alpha: 1)
+    static let placeholder = UIColor(withRed: 172, green: 172, blue: 172, alpha: 1)
+    static let line = UIColor(withRed: 216, green: 216, blue: 216, alpha: 1)
     static let tabBarSelected = UIColor(withRed: 200, green: 4, blue: 4, alpha: 1)
 }

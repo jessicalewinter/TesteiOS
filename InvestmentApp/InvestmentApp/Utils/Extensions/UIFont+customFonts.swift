@@ -9,8 +9,10 @@
 import UIKit
 
 enum FontSizes: CGFloat {
+    case smallestSize = 11
     case smallSize = 14
     case normalSize = 16
+    case largerSize = 18
     case titleSize = 28
     
 }
@@ -20,4 +22,7 @@ extension UIFont {
     static let secondTitle = UIFont(name: "DINPro-Medium", size: FontSizes.titleSize.rawValue)
     static let normalTitle = UIFont(name: "DINPro-Medium", size: FontSizes.normalSize.rawValue)
     static let table = UIFont(name: "DINPro-Regular", size: FontSizes.smallSize.rawValue)
+    static let titleForm = UIFont(name: "DINPro-Regular", size: FontSizes.normalSize.rawValue)
+    static let subtitleForm = UIFont(name: "DINPro-Regular", size: FontSizes.smallestSize.rawValue)
+    static let textForm = UIFont(name: "DINPro-Medium", size: FontSizes.largerSize.rawValue)
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InvestmentViewController: DefaultViewController {
+class InvestmentViewController: DefaultViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()

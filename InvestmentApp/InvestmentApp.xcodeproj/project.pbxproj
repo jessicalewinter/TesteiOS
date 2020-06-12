@@ -40,6 +40,9 @@
 		09C433BF2488AD01006731C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09C433BD2488AD01006731C8 /* LaunchScreen.storyboard */; };
 		09C433CA2488AD02006731C8 /* InvestmentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433C92488AD02006731C8 /* InvestmentAppTests.swift */; };
 		09C433D52488AD02006731C8 /* InvestmentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433D42488AD02006731C8 /* InvestmentAppUITests.swift */; };
+		09C64F1C2492E59800D7FF28 /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C64F1B2492E59800D7FF28 /* FloatingTextField.swift */; };
+		09C64F1E2492E78800D7FF28 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C64F1D2492E78800D7FF28 /* UITextField+fixCaretPosition.swift */; };
+		09C64F212492F84F00D7FF28 /* ValidationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C64F202492F84F00D7FF28 /* ValidationForm.swift */; };
 		09F0D06524907795001A0E18 /* UIColor+actionColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D06424907795001A0E18 /* UIColor+actionColors.swift */; };
 		09F0D068249150C6001A0E18 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D067249150C6001A0E18 /* Coordinator.swift */; };
 		09F0D06A249150D0001A0E18 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D069249150D0001A0E18 /* AppCoordinator.swift */; };
@@ -123,6 +126,9 @@
 		09C433D02488AD02006731C8 /* InvestmentAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvestmentAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C433D42488AD02006731C8 /* InvestmentAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentAppUITests.swift; sourceTree = "<group>"; };
 		09C433D62488AD02006731C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09C64F1B2492E59800D7FF28 /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
+		09C64F1D2492E78800D7FF28 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
+		09C64F202492F84F00D7FF28 /* ValidationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationForm.swift; sourceTree = "<group>"; };
 		09F0D06424907795001A0E18 /* UIColor+actionColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+actionColors.swift"; sourceTree = "<group>"; };
 		09F0D067249150C6001A0E18 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		09F0D069249150D0001A0E18 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -175,6 +181,7 @@
 		093FE024248FD0DE0086E120 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				09C64F1F2492F82E00D7FF28 /* RegexValidation */,
 				093FE04B24901F100086E120 /* Extensions */,
 				093FE025248FD0E50086E120 /* Protocols */,
 			);
@@ -238,6 +245,7 @@
 				09F0D06424907795001A0E18 /* UIColor+actionColors.swift */,
 				09F0D0842491D5B0001A0E18 /* UITabBarController+selectedImage.swift */,
 				09F7E2F62492CB27006B45FA /* UIImage+imageWithColor.swift */,
+				09C64F1D2492E78800D7FF28 /* UITextField+fixCaretPosition.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -306,6 +314,22 @@
 			path = InvestmentAppUITests;
 			sourceTree = "<group>";
 		};
+		09C64F1A2492E57900D7FF28 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				09C64F1B2492E59800D7FF28 /* FloatingTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		09C64F1F2492F82E00D7FF28 /* RegexValidation */ = {
+			isa = PBXGroup;
+			children = (
+				09C64F202492F84F00D7FF28 /* ValidationForm.swift */,
+			);
+			path = RegexValidation;
+			sourceTree = "<group>";
+		};
 		09F0D06624915075001A0E18 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +345,7 @@
 		09F0D06B249157FA001A0E18 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				09C64F1A2492E57900D7FF28 /* TextField */,
 				0985519F2492D2A2005C0958 /* ViewController */,
 				09F0D0862491E2C4001A0E18 /* TabBar */,
 				09F0D06C24915811001A0E18 /* Screens */,
@@ -563,12 +588,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09C64F1E2492E78800D7FF28 /* UITextField+fixCaretPosition.swift in Sources */,
 				093FE04824901ED20086E120 /* Dequeuable.swift in Sources */,
 				093FE027248FD0F80086E120 /* NetworkRepository.swift in Sources */,
 				0931313424903A56004BCB76 /* UITableViewCell+automaticRegistrable.swift in Sources */,
 				09F0D0882491E2D3001A0E18 /* TabBarController.swift in Sources */,
 				09F0D0812491CF13001A0E18 /* TabBarCoordinator.swift in Sources */,
 				0931313224903A20004BCB76 /* UITableViewCell+automaticDequeue.swift in Sources */,
+				09C64F1C2492E59800D7FF28 /* FloatingTextField.swift in Sources */,
 				093FE04624901E7A0086E120 /* ViewCodable.swift in Sources */,
 				0931313624903D91004BCB76 /* UIFont+customFonts.swift in Sources */,
 				09C433B72488ACF8006731C8 /* ViewController.swift in Sources */,
@@ -580,6 +607,7 @@
 				09F0D07C2491CBEC001A0E18 /* InvestmentCoordinator.swift in Sources */,
 				093FE02A248FD5EE0086E120 /* FormFormat.swift in Sources */,
 				09F0D06524907795001A0E18 /* UIColor+actionColors.swift in Sources */,
+				09C64F212492F84F00D7FF28 /* ValidationForm.swift in Sources */,
 				098551A12492D2BB005C0958 /* DefaultViewController.swift in Sources */,
 				0931313824904F6E004BCB76 /* UIColor+convenienceInit.swift in Sources */,
 				09F0D0852491D5B0001A0E18 /* UITabBarController+selectedImage.swift in Sources */,

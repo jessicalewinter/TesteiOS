@@ -34,6 +34,7 @@
 		094A7AEB249323BB00A3CEB2 /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7AEA249323BB00A3CEB2 /* ErrorAlert.swift */; };
 		094A7AED2493295900A3CEB2 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7AEC2493295900A3CEB2 /* ContactView.swift */; };
 		094A7AEF2493350800A3CEB2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7AEE2493350800A3CEB2 /* Bindable.swift */; };
+		094A7AF12493CA7900A3CEB2 /* FloatingTextField+convenienceInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7AF02493CA7900A3CEB2 /* FloatingTextField+convenienceInit.swift */; };
 		0971B88E24902B350011C2DD /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093FE01D248FCF7D0086E120 /* NetworkLayer.framework */; };
 		0971B88F24902B350011C2DD /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 093FE01D248FCF7D0086E120 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		098551A12492D2BB005C0958 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098551A02492D2BB005C0958 /* DefaultViewController.swift */; };
@@ -120,6 +121,7 @@
 		094A7AEA249323BB00A3CEB2 /* ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
 		094A7AEC2493295900A3CEB2 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		094A7AEE2493350800A3CEB2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		094A7AF02493CA7900A3CEB2 /* FloatingTextField+convenienceInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloatingTextField+convenienceInit.swift"; sourceTree = "<group>"; };
 		098551A02492D2BB005C0958 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		09C433AF2488ACF8006731C8 /* InvestmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvestmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C433B22488ACF8006731C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				09C64F1B2492E59800D7FF28 /* FloatingTextField.swift */,
+				094A7AF02493CA7900A3CEB2 /* FloatingTextField+convenienceInit.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				094A7AED2493295900A3CEB2 /* ContactView.swift in Sources */,
 				09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */,
 				09F0D07E2491CBFA001A0E18 /* ContactCoordinator.swift in Sources */,
+				094A7AF12493CA7900A3CEB2 /* FloatingTextField+convenienceInit.swift in Sources */,
 				09F0D06A249150D0001A0E18 /* AppCoordinator.swift in Sources */,
 				0931312E249038FE004BCB76 /* Identifiable.swift in Sources */,
 				093FE031248FD6BE0086E120 /* InvestmentService.swift in Sources */,

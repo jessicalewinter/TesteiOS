@@ -11,40 +11,30 @@ import UIKit
 class ContactView: UIView {
     var viewModel = ContactFormViewModel()
     
-    func createCustomTextField(textField: FloatingTextField, title: String) {
-        textField.autocorrectionType = .no
-        
-        textField.placeholder = title
-        textField.selectedTitle = title
-        textField.title = title
-        
-        textField.tintColor = UIColor.placeholder
-
-        textField.textColor = UIColor.darkText
-        textField.lineColor = UIColor.placeholder
-
-        textField.selectedTitleColor = UIColor.placeholder
-        textField.selectedLineColor = UIColor.line
-
-        // Set custom fonts for the title, placeholder and textfield labels
-        textField.titleLabel.font = UIFont.subtitleForm
-        textField.placeholderFont = UIFont.titleForm
-        textField.font = UIFont.textForm
-    }
+    lazy var textFields: [FloatingTextField] = {
+        let textFields = [nameField, emailField, phoneField]
+        return textFields
+    }()
     
     lazy var nameField: FloatingTextField = {
-        let floatingTextField = FloatingTextField()
+        let floatingTextField = FloatingTextField(with: "title")
         floatingTextField.translatesAutoresizingMaskIntoConstraints = false
-        createCustomTextField(textField: floatingTextField, title: "Nome")
         return floatingTextField
     }()
     
-    lazy var contactField: FloatingTextField = {
-        let floatingTextField = FloatingTextField()
+    lazy var emailField: FloatingTextField = {
+        let floatingTextField = FloatingTextField(with: "title")
         floatingTextField.translatesAutoresizingMaskIntoConstraints = false
-        createCustomTextField(textField: floatingTextField, title: "Contact")
         return floatingTextField
     }()
+    
+    lazy var phoneField: FloatingTextField = {
+        let floatingTextField = FloatingTextField(with: "title")
+        floatingTextField.translatesAutoresizingMaskIntoConstraints = false
+        return floatingTextField
+    }()
+    
+    var getTopHeight: (() -> Void)?
     
     init() {
         super.init(frame: .zero)
@@ -55,13 +45,20 @@ class ContactView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func setTitle(textField: FloatingTextField, text: String) {
+        textField.placeholder = text
+        textField.selectedTitle = text
+        textField.title = text
+    }
 }
 
 extension ContactView: ViewCodable {
     func buildViewHierarchy() {
         addSubViews([
             nameField,
-            contactField
+            emailField,
+            phoneField
         ])
     }
     
@@ -77,10 +74,16 @@ extension ContactView: ViewCodable {
         }
         
         NSLayoutConstraint.activate([
-            contactField.topAnchor.constraint(equalTo: nameField.bottomAnchor, constant: 30),
-            contactField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
-            contactField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40)
+            emailField.topAnchor.constraint(equalTo: nameField.bottomAnchor, constant: 30),
+            emailField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
+            emailField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40)
         ])
+        
+        NSLayoutConstraint.activate([
+           phoneField.topAnchor.constraint(equalTo: emailField.bottomAnchor, constant: 30),
+           phoneField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
+           phoneField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40)
+       ])
     }
     
     func setupAdditionalConfiguration() {
@@ -91,6 +94,15 @@ extension ContactView: ViewCodable {
 
 extension ContactView: Bindable {
     func bindtoViewModel() {
+        viewModel.getForm()
         
+        viewModel.needReloadForms = { [weak self] in
+            guard let self = self else {return}
+            
+            for (index, textField) in self.textFields.enumerated() {
+                self.setTitle(textField: textField, text: (self.viewModel.form?.cells[index+1].message)!)
+            }
+            
+        }
     }
 }

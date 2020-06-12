@@ -10,7 +10,7 @@
 import Foundation
 
 struct Form: Decodable {
-    let cells: [Cell]?
+    let cells: [Cell]
 }
 
 struct Cell: Decodable {

@@ -23,6 +23,9 @@ class ContactViewController: DefaultViewController, UITextFieldDelegate {
     }
     
     override func loadView() {
+        contactView.getTopHeight = {
+            
+        }
         view = contactView
     }
 

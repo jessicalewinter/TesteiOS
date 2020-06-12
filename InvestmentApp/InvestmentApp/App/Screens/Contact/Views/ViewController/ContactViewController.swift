@@ -9,24 +9,33 @@
 import UIKit
 
 class ContactViewController: DefaultViewController, UITextFieldDelegate {
-    
-    let contactView = ContactView()
+    lazy var contactView: ContactView = {
+        let view = ContactView()
+        view.delegateHeight = self
+        view.backgroundColor = .white
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         title = "Contato"
+        contactView.getDelegate()
         // Do any additional setup after loading the view.
         //        textField.delegate = self
         //
         //        textField.becomeFirstResponder()
+        
     }
     
     override func loadView() {
-        contactView.getTopHeight = {
-            
-        }
         view = contactView
     }
-
+    
+}
+extension ContactViewController: ContactViewDelegate {
+    func getTopAnchor(constraint: NSLayoutYAxisAnchor) {
+        let height = UIApplication.shared.statusBarFrame.height +
+        self.navigationController!.navigationBar.frame.height
+        topLayoutGuide.bottomAnchor.constraint(equalTo: constraint, constant: -height).isActive = true
+    }
 }

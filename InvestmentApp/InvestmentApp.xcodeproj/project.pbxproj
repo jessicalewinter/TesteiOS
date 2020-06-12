@@ -35,6 +35,8 @@
 		094A7AED2493295900A3CEB2 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7AEC2493295900A3CEB2 /* ContactView.swift */; };
 		094A7AEF2493350800A3CEB2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7AEE2493350800A3CEB2 /* Bindable.swift */; };
 		094A7AF12493CA7900A3CEB2 /* FloatingTextField+convenienceInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7AF02493CA7900A3CEB2 /* FloatingTextField+convenienceInit.swift */; };
+		094A7AF32493E5E700A3CEB2 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7AF22493E5E700A3CEB2 /* CheckboxView.swift */; };
+		094A7AF52493F1FA00A3CEB2 /* ContactViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7AF42493F1FA00A3CEB2 /* ContactViewDelegate.swift */; };
 		0971B88E24902B350011C2DD /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093FE01D248FCF7D0086E120 /* NetworkLayer.framework */; };
 		0971B88F24902B350011C2DD /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 093FE01D248FCF7D0086E120 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		098551A12492D2BB005C0958 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098551A02492D2BB005C0958 /* DefaultViewController.swift */; };
@@ -122,6 +124,8 @@
 		094A7AEC2493295900A3CEB2 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		094A7AEE2493350800A3CEB2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		094A7AF02493CA7900A3CEB2 /* FloatingTextField+convenienceInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloatingTextField+convenienceInit.swift"; sourceTree = "<group>"; };
+		094A7AF22493E5E700A3CEB2 /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
+		094A7AF42493F1FA00A3CEB2 /* ContactViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewDelegate.swift; sourceTree = "<group>"; };
 		098551A02492D2BB005C0958 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		09C433AF2488ACF8006731C8 /* InvestmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvestmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C433B22488ACF8006731C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -405,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				09F0D07324916C59001A0E18 /* ContactViewController.swift */,
+				094A7AF42493F1FA00A3CEB2 /* ContactViewDelegate.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 			children = (
 				094A7AEC2493295900A3CEB2 /* ContactView.swift */,
 				09F0D07124916C22001A0E18 /* ViewController */,
+				094A7AF22493E5E700A3CEB2 /* CheckboxView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -613,9 +619,11 @@
 			files = (
 				09C64F1E2492E78800D7FF28 /* UITextField+fixCaretPosition.swift in Sources */,
 				09C64F2324931DB300D7FF28 /* ContactFormViewModel.swift in Sources */,
+				094A7AF52493F1FA00A3CEB2 /* ContactViewDelegate.swift in Sources */,
 				093FE04824901ED20086E120 /* Dequeuable.swift in Sources */,
 				093FE027248FD0F80086E120 /* NetworkRepository.swift in Sources */,
 				094A7AEB249323BB00A3CEB2 /* ErrorAlert.swift in Sources */,
+				094A7AF32493E5E700A3CEB2 /* CheckboxView.swift in Sources */,
 				0931313424903A56004BCB76 /* UITableViewCell+automaticRegistrable.swift in Sources */,
 				09F0D0882491E2D3001A0E18 /* TabBarController.swift in Sources */,
 				09F0D0812491CF13001A0E18 /* TabBarCoordinator.swift in Sources */,

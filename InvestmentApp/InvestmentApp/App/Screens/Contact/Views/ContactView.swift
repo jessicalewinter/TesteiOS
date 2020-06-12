@@ -10,6 +10,7 @@ import UIKit
 
 class ContactView: UIView {
     var viewModel = ContactFormViewModel()
+    weak var delegateHeight: ContactViewDelegate?
     
     lazy var textFields: [FloatingTextField] = {
         let textFields = [nameField, emailField, phoneField]
@@ -33,9 +34,7 @@ class ContactView: UIView {
         floatingTextField.translatesAutoresizingMaskIntoConstraints = false
         return floatingTextField
     }()
-    
-    var getTopHeight: (() -> Void)?
-    
+        
     init() {
         super.init(frame: .zero)
         setupView()
@@ -44,6 +43,10 @@ class ContactView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func getDelegate() {
+        delegateHeight?.getTopAnchor(constraint: nameField.bottomAnchor)
     }
     
     func setTitle(textField: FloatingTextField, text: String) {
@@ -63,15 +66,10 @@ extension ContactView: ViewCodable {
     }
     
     func setupConstraints() {
-        if #available(iOS 11.0, *) {
-            NSLayoutConstraint.activate([
-                nameField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
-                nameField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 40),
-                nameField.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -40)
-            ])
-        } else {
-            // Fallback on earlier versions
-        }
+        NSLayoutConstraint.activate([
+            nameField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
+            nameField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40)
+        ])
         
         NSLayoutConstraint.activate([
             emailField.topAnchor.constraint(equalTo: nameField.bottomAnchor, constant: 30),
@@ -98,11 +96,11 @@ extension ContactView: Bindable {
         
         viewModel.needReloadForms = { [weak self] in
             guard let self = self else {return}
-            
+            var count = 0
             for (index, textField) in self.textFields.enumerated() {
-                self.setTitle(textField: textField, text: (self.viewModel.form?.cells[index+1].message)!)
+                count = index + 1
+                self.setTitle(textField: textField, text: (self.viewModel.form?.cells[count].message)!)
             }
-            
         }
     }
 }

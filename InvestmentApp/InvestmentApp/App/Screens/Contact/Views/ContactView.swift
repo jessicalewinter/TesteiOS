@@ -40,6 +40,13 @@ class ContactView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
+    lazy var sendButton: UIButton = {
+        let button = UIButton(with: .action, and: .buttonPressed)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("ablubleble", for: .normal)
+        return button
+    }()
         
     init() {
         super.init(frame: .zero)
@@ -68,7 +75,8 @@ extension ContactView: ViewCodable {
             nameField,
             emailField,
             phoneField,
-            checkBox
+            checkBox,
+            sendButton
         ])
     }
     
@@ -91,10 +99,17 @@ extension ContactView: ViewCodable {
         ])
         
         NSLayoutConstraint.activate([
-           checkBox.topAnchor.constraint(equalTo: phoneField.bottomAnchor, constant: 40),
+           checkBox.topAnchor.constraint(equalTo: phoneField.bottomAnchor, constant: 50),
            checkBox.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
            checkBox.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
            checkBox.heightAnchor.constraint(equalToConstant: 50)
+        ])
+        
+        NSLayoutConstraint.activate([
+           sendButton.topAnchor.constraint(equalTo: checkBox.bottomAnchor, constant: 30),
+           sendButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
+           sendButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
+           sendButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
@@ -113,9 +128,10 @@ extension ContactView: Bindable {
             var count = 0
             for (index, textField) in self.textFields.enumerated() {
                 count = index + 1
-                self.setTitle(textField: textField, text: (self.viewModel.form?.cells[count].message)!)
+                self.setTitle(textField: textField, text: self.viewModel.cells[count].message)
             }
             self.checkBox.checkLabel.text = self.viewModel.form?.cells[count+1].message
+            self.sendButton.setTitle(self.viewModel.cells[count+2].message, for: .normal)
         }
     }
 }

@@ -17,6 +17,11 @@ class ContactFormViewModel {
     var needReloadForms: VoidClosure?
     
     var form: Form?
+    
+    var cells: [Cell] {
+        guard let form = form else {fatalError("error getting form")}
+        return form.cells
+    }
 
     func getForm() {
         InvestmentRepository.getForm {[weak self] (result) in

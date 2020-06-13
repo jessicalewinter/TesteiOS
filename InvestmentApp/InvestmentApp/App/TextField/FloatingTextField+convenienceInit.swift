@@ -25,8 +25,8 @@ extension FloatingTextField {
         self.selectedLineColor = UIColor.line
 
         // Set custom fonts for the title, placeholder and textfield labels
-        self.titleLabel.font = UIFont.subtitleForm
-        self.placeholderFont = UIFont.titleForm
-        self.font = UIFont.textForm
+        self.titleLabel.font = UIFont.smallestRegularTitle
+        self.placeholderFont = UIFont.normalRegularTitle
+        self.font = UIFont.largeMediumTitle
     }
 }

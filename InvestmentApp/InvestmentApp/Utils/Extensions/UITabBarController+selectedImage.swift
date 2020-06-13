@@ -24,7 +24,7 @@ extension UITabBarController {
         UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -16)
         
         UITabBarItem.appearance().setTitleTextAttributes([
-            NSAttributedString.Key.font: UIFont.normalTitle!,
+            NSAttributedString.Key.font: UIFont.normalMediumTitle!,
             NSAttributedString.Key.foregroundColor: UIColor.white
         ], for: .normal)
         

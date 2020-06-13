@@ -34,6 +34,12 @@ class ContactView: UIView {
         floatingTextField.translatesAutoresizingMaskIntoConstraints = false
         return floatingTextField
     }()
+    
+    lazy var checkBox: CheckboxView = {
+        let view = CheckboxView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
         
     init() {
         super.init(frame: .zero)
@@ -61,7 +67,8 @@ extension ContactView: ViewCodable {
         addSubViews([
             nameField,
             emailField,
-            phoneField
+            phoneField,
+            checkBox
         ])
     }
     
@@ -81,7 +88,14 @@ extension ContactView: ViewCodable {
            phoneField.topAnchor.constraint(equalTo: emailField.bottomAnchor, constant: 30),
            phoneField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
            phoneField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40)
-       ])
+        ])
+        
+        NSLayoutConstraint.activate([
+           checkBox.topAnchor.constraint(equalTo: phoneField.bottomAnchor, constant: 40),
+           checkBox.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
+           checkBox.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
+           checkBox.heightAnchor.constraint(equalToConstant: 50)
+        ])
     }
     
     func setupAdditionalConfiguration() {
@@ -101,6 +115,7 @@ extension ContactView: Bindable {
                 count = index + 1
                 self.setTitle(textField: textField, text: (self.viewModel.form?.cells[count].message)!)
             }
+            self.checkBox.checkLabel.text = self.viewModel.form?.cells[count+1].message
         }
     }
 }

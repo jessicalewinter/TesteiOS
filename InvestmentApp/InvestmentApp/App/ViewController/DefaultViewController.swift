@@ -14,7 +14,7 @@ class DefaultViewController: UIViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.font: UIFont.normalTitle!,
+            NSAttributedString.Key.font: UIFont.normalMediumTitle!,
             NSAttributedString.Key.foregroundColor: UIColor.darkText
         ]
     }

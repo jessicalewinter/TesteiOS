@@ -17,13 +17,7 @@ class ContactFormViewModel {
     var needReloadForms: VoidClosure?
     
     var form: Form?
-//    {
-//        didSet {
-//            guard let form = form else {return}
-//            needReloadForms?(form.cells[0].message)
-//        }
-//    }
-    
+
     func getForm() {
         InvestmentRepository.getForm {[weak self] (result) in
             guard let self = self else {return}

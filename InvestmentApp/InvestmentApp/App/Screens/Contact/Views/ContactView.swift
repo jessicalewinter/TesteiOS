@@ -152,7 +152,7 @@ extension ContactView: Bindable {
     func bindtoViewModel() {
         viewModel.getForm()
         
-        viewModel.needReloadForms = { [weak self] in
+        viewModel.needReloadItems = { [weak self] in
             guard let self = self else {return}
             var count = 0
             for (index, textField) in self.textFields.enumerated() {

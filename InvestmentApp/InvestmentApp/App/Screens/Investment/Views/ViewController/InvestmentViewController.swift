@@ -9,12 +9,23 @@
 import UIKit
 
 class InvestmentViewController: DefaultViewController, UITextFieldDelegate {
+    
+    lazy var investmentView: InvestmentView = {
+        let view = InvestmentView()
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         title = "Investimento"
+        let shareButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: nil)
+        shareButton.tintColor = .action
+        navigationItem.rightBarButtonItem = shareButton
         // Do any additional setup after loading the view.
+    }
+    
+    override func loadView() {
+        view = investmentView
     }
 
 }

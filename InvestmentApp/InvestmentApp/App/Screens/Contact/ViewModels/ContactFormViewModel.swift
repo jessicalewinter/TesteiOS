@@ -8,13 +8,9 @@
 
 import UIKit
 
-class ContactFormViewModel {
-    typealias VoidClosure = (() -> Void)
-    typealias BooleanClosure = ((Bool) -> Void)
-    typealias StringClosure = ((String) -> Void)
-    
+class ContactFormViewModel: DefaultViewModel {
     var getAlertWithError: StringClosure?
-    var needReloadForms: VoidClosure?
+    var needReloadItems: VoidClosure?
     
     var form: Form?
     
@@ -33,7 +29,7 @@ class ContactFormViewModel {
                     self.getAlertWithError?(error.localizedDescription)
                 case .success(let form):
                     self.form = form
-                    self.needReloadForms?()
+                    self.needReloadItems?()
                 }
             }
         }

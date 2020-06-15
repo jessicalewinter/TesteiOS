@@ -9,7 +9,7 @@
 import UIKit
 
 class InvestmentCoordinator: Coordinator {
-    let navigationController: UINavigationController
+    weak var navigationController: UINavigationController?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -17,6 +17,6 @@ class InvestmentCoordinator: Coordinator {
     
     func start() {
         let investmentViewController = InvestmentViewController()
-        navigationController.pushViewController(investmentViewController, animated: false)
+        navigationController?.pushViewController(investmentViewController, animated: false)
     }
 }

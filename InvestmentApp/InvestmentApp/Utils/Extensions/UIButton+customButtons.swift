@@ -21,8 +21,6 @@ extension UIButton {
         }
     }
     
-    
-    
     convenience init(with color: UIColor, and highlighted: UIColor) {
         self.init()
         backgroundColor = color

@@ -8,8 +8,12 @@
 
 import UIKit
 
+protocol ContactFlow: AnyObject {
+    func coordinateToDetail()
+}
+
 class ContactCoordinator: Coordinator {
-    let navigationController: UINavigationController
+    weak var navigationController: UINavigationController?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -17,6 +21,14 @@ class ContactCoordinator: Coordinator {
     
     func start() {
         let contactViewController = ContactViewController()
-        navigationController.pushViewController(contactViewController, animated: false)
+        contactViewController.contactView.coordinator = self
+        navigationController?.pushViewController(contactViewController, animated: false)
+    }
+}
+
+extension ContactCoordinator: ContactFlow {
+    func coordinateToDetail() {
+        let contactDetailsCoordinator = ContactDetailCoordinator(navigationController: navigationController!)
+        coordinate(to: contactDetailsCoordinator)
     }
 }

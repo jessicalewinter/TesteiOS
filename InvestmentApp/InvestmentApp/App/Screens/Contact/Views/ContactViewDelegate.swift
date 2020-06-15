@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol ContactViewDelegate: class {
-    func getTopAnchor(constraint: NSLayoutYAxisAnchor)
+protocol ContactViewDelegate: AnyObject {
+    func getAnchor(constraint: NSLayoutYAxisAnchor)
 }

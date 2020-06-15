@@ -40,6 +40,9 @@
 		094A7AF624954E0D00A3CEB2 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093FE01D248FCF7D0086E120 /* NetworkLayer.framework */; };
 		094A7AF724954E0D00A3CEB2 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 093FE01D248FCF7D0086E120 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		094A7AFE2495586100A3CEB2 /* UIButton+customButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7AFD2495586100A3CEB2 /* UIButton+customButtons.swift */; };
+		094A7B002495797900A3CEB2 /* ContactDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7AFF2495797900A3CEB2 /* ContactDetailCoordinator.swift */; };
+		094A7B05249580EA00A3CEB2 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7B04249580EA00A3CEB2 /* ContactDetailViewController.swift */; };
+		094A7B072496DA3000A3CEB2 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7B062496DA3000A3CEB2 /* ContactDetailView.swift */; };
 		098551A12492D2BB005C0958 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098551A02492D2BB005C0958 /* DefaultViewController.swift */; };
 		09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B22488ACF8006731C8 /* AppDelegate.swift */; };
 		09C433B72488ACF8006731C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B62488ACF8006731C8 /* ViewController.swift */; };
@@ -128,6 +131,9 @@
 		094A7AF22493E5E700A3CEB2 /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
 		094A7AF42493F1FA00A3CEB2 /* ContactViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewDelegate.swift; sourceTree = "<group>"; };
 		094A7AFD2495586100A3CEB2 /* UIButton+customButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+customButtons.swift"; sourceTree = "<group>"; };
+		094A7AFF2495797900A3CEB2 /* ContactDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailCoordinator.swift; sourceTree = "<group>"; };
+		094A7B04249580EA00A3CEB2 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		094A7B062496DA3000A3CEB2 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 		098551A02492D2BB005C0958 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		09C433AF2488ACF8006731C8 /* InvestmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvestmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C433B22488ACF8006731C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -287,6 +293,31 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		094A7B0124957F3100A3CEB2 /* ContactDetails */ = {
+			isa = PBXGroup;
+			children = (
+				094A7B0224957F9200A3CEB2 /* Views */,
+			);
+			path = ContactDetails;
+			sourceTree = "<group>";
+		};
+		094A7B0224957F9200A3CEB2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				094A7B062496DA3000A3CEB2 /* ContactDetailView.swift */,
+				094A7B0324957FA200A3CEB2 /* ViewController */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		094A7B0324957FA200A3CEB2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				094A7B04249580EA00A3CEB2 /* ContactDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		0985519F2492D2A2005C0958 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +407,7 @@
 				09F0D07B2491CBEC001A0E18 /* InvestmentCoordinator.swift */,
 				09F0D07D2491CBFA001A0E18 /* ContactCoordinator.swift */,
 				09F0D0802491CF13001A0E18 /* TabBarCoordinator.swift */,
+				094A7AFF2495797900A3CEB2 /* ContactDetailCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -392,6 +424,7 @@
 		09F0D06C24915811001A0E18 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				094A7B0124957F3100A3CEB2 /* ContactDetails */,
 				09F0D06E24915827001A0E18 /* Contact */,
 				09F0D06D2491581F001A0E18 /* Investment */,
 			);
@@ -420,7 +453,6 @@
 			isa = PBXGroup;
 			children = (
 				09F0D07324916C59001A0E18 /* ContactViewController.swift */,
-				094A7AF42493F1FA00A3CEB2 /* ContactViewDelegate.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -430,6 +462,7 @@
 			children = (
 				094A7AF22493E5E700A3CEB2 /* CheckboxView.swift */,
 				094A7AEC2493295900A3CEB2 /* ContactView.swift */,
+				094A7AF42493F1FA00A3CEB2 /* ContactViewDelegate.swift */,
 				09F0D07124916C22001A0E18 /* ViewController */,
 			);
 			path = Views;
@@ -632,6 +665,7 @@
 				09C64F2324931DB300D7FF28 /* ContactFormViewModel.swift in Sources */,
 				094A7AF52493F1FA00A3CEB2 /* ContactViewDelegate.swift in Sources */,
 				093FE04824901ED20086E120 /* Dequeuable.swift in Sources */,
+				094A7B002495797900A3CEB2 /* ContactDetailCoordinator.swift in Sources */,
 				093FE027248FD0F80086E120 /* NetworkRepository.swift in Sources */,
 				094A7AEB249323BB00A3CEB2 /* ErrorAlert.swift in Sources */,
 				094A7AF32493E5E700A3CEB2 /* CheckboxView.swift in Sources */,
@@ -652,10 +686,12 @@
 				09F0D07C2491CBEC001A0E18 /* InvestmentCoordinator.swift in Sources */,
 				093FE02A248FD5EE0086E120 /* Form.swift in Sources */,
 				09F0D06524907795001A0E18 /* UIColor+actionColors.swift in Sources */,
+				094A7B05249580EA00A3CEB2 /* ContactDetailViewController.swift in Sources */,
 				09C64F212492F84F00D7FF28 /* ValidationForm.swift in Sources */,
 				098551A12492D2BB005C0958 /* DefaultViewController.swift in Sources */,
 				0931313824904F6E004BCB76 /* UIColor+convenienceInit.swift in Sources */,
 				09F0D0852491D5B0001A0E18 /* UITabBarController+selectedImage.swift in Sources */,
+				094A7B072496DA3000A3CEB2 /* ContactDetailView.swift in Sources */,
 				093FE04D2490203C0086E120 /* UIView+addSubViews.swift in Sources */,
 				09F7E2F72492CB27006B45FA /* UIImage+imageWithColor.swift in Sources */,
 				094A7AFE2495586100A3CEB2 /* UIButton+customButtons.swift in Sources */,

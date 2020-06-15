@@ -11,6 +11,7 @@ import UIKit
 class ContactView: UIView {
     var viewModel = ContactFormViewModel()
     weak var delegateHeight: ContactViewDelegate?
+    var coordinator: ContactFlow?
     
     lazy var textFields: [FloatingTextField] = {
         let textFields = [nameField, emailField, phoneField]
@@ -45,6 +46,7 @@ class ContactView: UIView {
         let button = UIButton(with: .action, and: .buttonPressed)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("ablubleble", for: .normal)
+        button.addTarget(self, action: #selector(pushToDetails), for: .touchUpInside)
         return button
     }()
         
@@ -59,13 +61,17 @@ class ContactView: UIView {
     }
     
     func getDelegate() {
-        delegateHeight?.getTopAnchor(constraint: nameField.bottomAnchor)
+        delegateHeight?.getAnchor(constraint: nameField.bottomAnchor)
     }
     
     func setTitle(textField: FloatingTextField, text: String) {
         textField.placeholder = text
         textField.selectedTitle = text
         textField.title = text
+    }
+    
+    @objc func pushToDetails() {
+        coordinator?.coordinateToDetail()
     }
 }
 
@@ -130,7 +136,7 @@ extension ContactView: Bindable {
                 count = index + 1
                 self.setTitle(textField: textField, text: self.viewModel.cells[count].message)
             }
-            self.checkBox.checkLabel.text = self.viewModel.form?.cells[count+1].message
+            self.checkBox.checkLabel.text = self.viewModel.cells[count+1].message
             self.sendButton.setTitle(self.viewModel.cells[count+2].message, for: .normal)
         }
     }

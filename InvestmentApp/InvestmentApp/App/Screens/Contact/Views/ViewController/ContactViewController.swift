@@ -9,6 +9,7 @@
 import UIKit
 
 class ContactViewController: DefaultViewController, UITextFieldDelegate {
+    
     lazy var contactView: ContactView = {
         let view = ContactView()
         view.delegateHeight = self
@@ -24,7 +25,8 @@ class ContactViewController: DefaultViewController, UITextFieldDelegate {
         //        textField.delegate = self
         //
         //        textField.becomeFirstResponder()
-        
+        self.navigationItem.leftBarButtonItem = nil
+        self.navigationItem.hidesBackButton = true
     }
     
     override func loadView() {
@@ -33,7 +35,7 @@ class ContactViewController: DefaultViewController, UITextFieldDelegate {
     
 }
 extension ContactViewController: ContactViewDelegate {
-    func getTopAnchor(constraint: NSLayoutYAxisAnchor) {
+    func getAnchor(constraint: NSLayoutYAxisAnchor) {
         let height = UIApplication.shared.statusBarFrame.height +
         self.navigationController!.navigationBar.frame.height
         topLayoutGuide.bottomAnchor.constraint(equalTo: constraint, constant: -height).isActive = true

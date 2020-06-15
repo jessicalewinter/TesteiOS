@@ -20,6 +20,15 @@ enum FormType {
             return "^\\([1-9]{2}\\) (?:[2-8]|9[1-9])[0-9]{3}\\-[0-9]{4}$"
         }
     }
+    
+    var errorMessage: String {
+        switch self {
+        case .email:
+            return "Email não é válido. Digite no formato nome@email.com"
+        case .phone:
+            return "Número não é válido. Digite no formato 91234-5678"
+        }
+    }
 }
 
 class ValidationForm {

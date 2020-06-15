@@ -9,10 +9,10 @@
 import UIKit
 
 class ContactViewController: DefaultViewController, UITextFieldDelegate {
-    
     lazy var contactView: ContactView = {
         let view = ContactView()
         view.delegateHeight = self
+        view.alertDelegate = self
         view.backgroundColor = .white
         return view
     }()
@@ -21,10 +21,6 @@ class ContactViewController: DefaultViewController, UITextFieldDelegate {
         super.viewDidLoad()
         title = "Contato"
         contactView.getDelegate()
-        // Do any additional setup after loading the view.
-        //        textField.delegate = self
-        //
-        //        textField.becomeFirstResponder()
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true
     }
@@ -39,5 +35,11 @@ extension ContactViewController: ContactViewDelegate {
         let height = UIApplication.shared.statusBarFrame.height +
         self.navigationController!.navigationBar.frame.height
         topLayoutGuide.bottomAnchor.constraint(equalTo: constraint, constant: -height).isActive = true
+    }
+}
+
+extension ContactViewController: AlertDelegate {
+    func showAlert() {
+        defaultAlert("Erro: campos inválidos", message: "Não foi possível enviar os dados, pois há campos inválidos. Tente novamente.", actionTitle: "OK", completion: nil)
     }
 }

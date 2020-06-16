@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum InvestmentViewModelItemType {
-    case introView
+enum InvestmentViewModelItemType: Int, CaseIterable {
+    case introView = 0
     case moreInfo
     case info
     case downInfo

@@ -31,6 +31,7 @@
 		093FE04624901E7A0086E120 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE04524901E7A0086E120 /* ViewCodable.swift */; };
 		093FE04824901ED20086E120 /* Dequeuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE04724901ED20086E120 /* Dequeuable.swift */; };
 		093FE04D2490203C0086E120 /* UIView+addSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093FE04C2490203C0086E120 /* UIView+addSubViews.swift */; };
+		0948EEBE24985E73002F629F /* InvestmentDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0948EEBD24985E73002F629F /* InvestmentDataSource.swift */; };
 		094A7AEB249323BB00A3CEB2 /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7AEA249323BB00A3CEB2 /* ErrorAlert.swift */; };
 		094A7AED2493295900A3CEB2 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7AEC2493295900A3CEB2 /* ContactView.swift */; };
 		094A7AEF2493350800A3CEB2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7AEE2493350800A3CEB2 /* Bindable.swift */; };
@@ -46,6 +47,7 @@
 		095915762497B450001E1186 /* DefaultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095915752497B450001E1186 /* DefaultViewModel.swift */; };
 		095915792497C7EB001E1186 /* IntroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095915782497C7EB001E1186 /* IntroTableViewCell.swift */; };
 		0959157B2497DE64001E1186 /* InvestmentViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0959157A2497DE64001E1186 /* InvestmentViewModelItem.swift */; };
+		0959157D2498144D001E1186 /* RiskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0959157C2498144D001E1186 /* RiskView.swift */; };
 		0967403E2497A29900A6AD14 /* AlertDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967403D2497A29900A6AD14 /* AlertDelegate.swift */; };
 		096740402497A53E00A6AD14 /* UIViewController+createAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967403F2497A53E00A6AD14 /* UIViewController+createAlert.swift */; };
 		096740432497A95E00A6AD14 /* InvestmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096740422497A95E00A6AD14 /* InvestmentView.swift */; };
@@ -131,6 +133,7 @@
 		093FE04524901E7A0086E120 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		093FE04724901ED20086E120 /* Dequeuable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dequeuable.swift; sourceTree = "<group>"; };
 		093FE04C2490203C0086E120 /* UIView+addSubViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addSubViews.swift"; sourceTree = "<group>"; };
+		0948EEBD24985E73002F629F /* InvestmentDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentDataSource.swift; sourceTree = "<group>"; };
 		094A7AEA249323BB00A3CEB2 /* ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
 		094A7AEC2493295900A3CEB2 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		094A7AEE2493350800A3CEB2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
@@ -144,6 +147,7 @@
 		095915752497B450001E1186 /* DefaultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewModel.swift; sourceTree = "<group>"; };
 		095915782497C7EB001E1186 /* IntroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroTableViewCell.swift; sourceTree = "<group>"; };
 		0959157A2497DE64001E1186 /* InvestmentViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentViewModelItem.swift; sourceTree = "<group>"; };
+		0959157C2498144D001E1186 /* RiskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskView.swift; sourceTree = "<group>"; };
 		0967403D2497A29900A6AD14 /* AlertDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDelegate.swift; sourceTree = "<group>"; };
 		0967403F2497A53E00A6AD14 /* UIViewController+createAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+createAlert.swift"; sourceTree = "<group>"; };
 		096740422497A95E00A6AD14 /* InvestmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentView.swift; sourceTree = "<group>"; };
@@ -290,6 +294,14 @@
 				0967403F2497A53E00A6AD14 /* UIViewController+createAlert.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0948EEBC24985E52002F629F /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				0948EEBD24985E73002F629F /* InvestmentDataSource.swift */,
+			);
+			path = Datasource;
 			sourceTree = "<group>";
 		};
 		094A7AE9249323AA00A3CEB2 /* Enums */ = {
@@ -477,6 +489,7 @@
 		09F0D06D2491581F001A0E18 /* Investment */ = {
 			isa = PBXGroup;
 			children = (
+				0948EEBC24985E52002F629F /* Datasource */,
 				09F0D0772491CB4B001A0E18 /* ViewModels */,
 				09F0D07624916C8F001A0E18 /* Views */,
 			);
@@ -522,6 +535,7 @@
 			isa = PBXGroup;
 			children = (
 				096740422497A95E00A6AD14 /* InvestmentView.swift */,
+				0959157C2498144D001E1186 /* RiskView.swift */,
 				095915772497C7C4001E1186 /* Cells */,
 				096740412497A92D00A6AD14 /* ViewController */,
 			);
@@ -718,6 +732,7 @@
 				09F0D0882491E2D3001A0E18 /* TabBarController.swift in Sources */,
 				09F0D0812491CF13001A0E18 /* TabBarCoordinator.swift in Sources */,
 				0931313224903A20004BCB76 /* UITableViewCell+automaticDequeue.swift in Sources */,
+				0948EEBE24985E73002F629F /* InvestmentDataSource.swift in Sources */,
 				09C64F1C2492E59800D7FF28 /* FloatingTextField.swift in Sources */,
 				093FE04624901E7A0086E120 /* ViewCodable.swift in Sources */,
 				0931313624903D91004BCB76 /* UIFont+customFonts.swift in Sources */,
@@ -741,6 +756,7 @@
 				09F0D0852491D5B0001A0E18 /* UITabBarController+selectedImage.swift in Sources */,
 				096740432497A95E00A6AD14 /* InvestmentView.swift in Sources */,
 				095915792497C7EB001E1186 /* IntroTableViewCell.swift in Sources */,
+				0959157D2498144D001E1186 /* RiskView.swift in Sources */,
 				094A7B072496DA3000A3CEB2 /* ContactDetailView.swift in Sources */,
 				093FE04D2490203C0086E120 /* UIView+addSubViews.swift in Sources */,
 				09F7E2F72492CB27006B45FA /* UIImage+imageWithColor.swift in Sources */,

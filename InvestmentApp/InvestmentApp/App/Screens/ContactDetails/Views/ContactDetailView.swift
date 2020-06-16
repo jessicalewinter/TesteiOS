@@ -26,7 +26,7 @@ class ContactDetailView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.font = UIFont.title
+        label.font = UIFont.mediumTitle
         label.textColor = UIColor.darkText
         label.textAlignment = .center
         label.text = "Mensagem enviada com sucesso :)"

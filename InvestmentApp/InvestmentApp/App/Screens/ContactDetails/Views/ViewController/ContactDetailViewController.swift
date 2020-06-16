@@ -29,8 +29,8 @@ class ContactDetailViewController: DefaultViewController {
     }
 }
 
-extension ContactDetailViewController: ContactViewDelegate {
-    func getAnchor(constraint: NSLayoutYAxisAnchor) {
+extension ContactDetailViewController: BottomDelegate {
+    func getBottomAnchor(constraint: NSLayoutYAxisAnchor) {
         guard let height = tabBarController?.tabBar.frame.size.height else { return }
         bottomLayoutGuide.bottomAnchor.constraint(equalTo: constraint, constant: height + 60).isActive = true
     }

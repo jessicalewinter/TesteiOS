@@ -20,3 +20,9 @@ class DefaultViewController: UIViewController {
         ]
     }
 }
+extension DefaultViewController: ContactViewDelegate {
+    func getTopAnchor(constraint: NSLayoutYAxisAnchor) {
+        let height = self.navigationController!.navigationBar.frame.height
+        topLayoutGuide.bottomAnchor.constraint(equalTo: constraint, constant: -height).isActive = true
+    }
+}

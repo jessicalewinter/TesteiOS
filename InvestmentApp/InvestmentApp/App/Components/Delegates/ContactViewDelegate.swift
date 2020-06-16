@@ -9,5 +9,5 @@
 import UIKit
 
 protocol ContactViewDelegate: AnyObject {
-    func getAnchor(constraint: NSLayoutYAxisAnchor)
+    func getTopAnchor(constraint: NSLayoutYAxisAnchor)
 }

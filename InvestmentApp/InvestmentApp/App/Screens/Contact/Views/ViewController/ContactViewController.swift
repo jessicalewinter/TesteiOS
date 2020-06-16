@@ -30,13 +30,6 @@ class ContactViewController: DefaultViewController, UITextFieldDelegate {
     }
     
 }
-extension ContactViewController: ContactViewDelegate {
-    func getAnchor(constraint: NSLayoutYAxisAnchor) {
-        let height = UIApplication.shared.statusBarFrame.height +
-        self.navigationController!.navigationBar.frame.height
-        topLayoutGuide.bottomAnchor.constraint(equalTo: constraint, constant: -height).isActive = true
-    }
-}
 
 extension ContactViewController: AlertDelegate {
     func showAlert() {

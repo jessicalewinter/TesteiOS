@@ -71,7 +71,7 @@ class ContactView: UIView {
     }
     
     func getDelegate() {
-        delegateHeight?.getAnchor(constraint: nameField.bottomAnchor)
+        delegateHeight?.getTopAnchor(constraint: nameField.topAnchor)
     }
     
     func setTitle(textField: FloatingTextField, text: String) {
@@ -83,7 +83,9 @@ class ContactView: UIView {
     @objc func pushToDetails() {
         var flag = false
         for textField in textFields {
-            if textField.errorMessage != nil {
+            if textField.text == "" {
+                flag = true
+            } else if textField.errorMessage != nil {
                 flag = true
             } else {
                 flag = false

@@ -12,8 +12,9 @@ import WebKit
 class WebViewController: DefaultViewController {
     var coordinator: WebViewFlow?
     
-    lazy var webView: WKWebView = {
-        let view = WKWebView()
+    lazy var webView: WebView = {
+        let view = WebView()
+        view.delegateHeight = self
         return view
     }()
     
@@ -21,14 +22,7 @@ class WebViewController: DefaultViewController {
         super.viewDidLoad()
         let rightBar = UIBarButtonItem(title: "Fechar", style: .done, target: self, action: #selector(dismissView))
         navigationItem.rightBarButtonItem = rightBar
-        webView.load("https://www.google.com")
-        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
-    }
-    
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "estimatedProgress" {
-            print(Float(webView.estimatedProgress))
-        }
+        webView.getDelegate()
     }
     
     @objc func dismissView() {
@@ -37,14 +31,5 @@ class WebViewController: DefaultViewController {
     
     override func loadView() {
         view = webView
-    }
-}
-
-extension WKWebView {
-    func load(_ urlString: String) {
-        if let url = URL(string: urlString) {
-            let request = URLRequest(url: url)
-            load(request)
-        }
     }
 }

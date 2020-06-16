@@ -59,10 +59,13 @@
 		09663EFB2499580400F043F4 /* InvestButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09663EFA2499580400F043F4 /* InvestButtonTableViewCell.swift */; };
 		09663EFD24995D0500F043F4 /* WebViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09663EFC24995D0500F043F4 /* WebViewCoordinator.swift */; };
 		09663F0124995DD800F043F4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09663F0024995DD800F043F4 /* WebViewController.swift */; };
+		09663F0424996DE300F043F4 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09663F0324996DE300F043F4 /* WebView.swift */; };
 		0967403E2497A29900A6AD14 /* AlertDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967403D2497A29900A6AD14 /* AlertDelegate.swift */; };
 		096740402497A53E00A6AD14 /* UIViewController+createAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967403F2497A53E00A6AD14 /* UIViewController+createAlert.swift */; };
 		096740432497A95E00A6AD14 /* InvestmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096740422497A95E00A6AD14 /* InvestmentView.swift */; };
 		096740452497AA0500A6AD14 /* InvestmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096740442497AA0500A6AD14 /* InvestmentViewModel.swift */; };
+		09767388249981F300A94376 /* WKWebView+load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09767387249981F300A94376 /* WKWebView+load.swift */; };
+		0976738A2499888000A94376 /* BottomDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097673892499888000A94376 /* BottomDelegate.swift */; };
 		098551A12492D2BB005C0958 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098551A02492D2BB005C0958 /* DefaultViewController.swift */; };
 		09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B22488ACF8006731C8 /* AppDelegate.swift */; };
 		09C433B72488ACF8006731C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B62488ACF8006731C8 /* ViewController.swift */; };
@@ -170,10 +173,13 @@
 		09663EFA2499580400F043F4 /* InvestButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestButtonTableViewCell.swift; sourceTree = "<group>"; };
 		09663EFC24995D0500F043F4 /* WebViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewCoordinator.swift; sourceTree = "<group>"; };
 		09663F0024995DD800F043F4 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		09663F0324996DE300F043F4 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		0967403D2497A29900A6AD14 /* AlertDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDelegate.swift; sourceTree = "<group>"; };
 		0967403F2497A53E00A6AD14 /* UIViewController+createAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+createAlert.swift"; sourceTree = "<group>"; };
 		096740422497A95E00A6AD14 /* InvestmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentView.swift; sourceTree = "<group>"; };
 		096740442497AA0500A6AD14 /* InvestmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentViewModel.swift; sourceTree = "<group>"; };
+		09767387249981F300A94376 /* WKWebView+load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKWebView+load.swift"; sourceTree = "<group>"; };
+		097673892499888000A94376 /* BottomDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDelegate.swift; sourceTree = "<group>"; };
 		098551A02492D2BB005C0958 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		09C433AF2488ACF8006731C8 /* InvestmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvestmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C433B22488ACF8006731C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -315,6 +321,7 @@
 				094A7AFD2495586100A3CEB2 /* UIButton+customButtons.swift */,
 				0967403F2497A53E00A6AD14 /* UIViewController+createAlert.swift */,
 				09663EEC2499142F00F043F4 /* UILabel+customLabel.swift */,
+				09767387249981F300A94376 /* WKWebView+load.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -406,9 +413,18 @@
 		09663EFF24995DCA00F043F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				09663F0024995DD800F043F4 /* WebViewController.swift */,
+				09663F0324996DE300F043F4 /* WebView.swift */,
+				09663F0224996DCE00F043F4 /* ViewController */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		09663F0224996DCE00F043F4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				09663F0024995DD800F043F4 /* WebViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		0967403C2497A27300A6AD14 /* Delegates */ = {
@@ -416,6 +432,7 @@
 			children = (
 				094A7AF42493F1FA00A3CEB2 /* ContactViewDelegate.swift */,
 				0967403D2497A29900A6AD14 /* AlertDelegate.swift */,
+				097673892499888000A94376 /* BottomDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -783,6 +800,7 @@
 				094A7AF52493F1FA00A3CEB2 /* ContactViewDelegate.swift in Sources */,
 				093FE04824901ED20086E120 /* Dequeuable.swift in Sources */,
 				094A7B002495797900A3CEB2 /* ContactDetailCoordinator.swift in Sources */,
+				09663F0424996DE300F043F4 /* WebView.swift in Sources */,
 				093FE027248FD0F80086E120 /* NetworkRepository.swift in Sources */,
 				094A7AEB249323BB00A3CEB2 /* ErrorAlert.swift in Sources */,
 				094A7AF32493E5E700A3CEB2 /* CheckboxView.swift in Sources */,
@@ -791,12 +809,14 @@
 				09F0D0812491CF13001A0E18 /* TabBarCoordinator.swift in Sources */,
 				0931313224903A20004BCB76 /* UITableViewCell+automaticDequeue.swift in Sources */,
 				0948EEBE24985E73002F629F /* InvestmentDataSource.swift in Sources */,
+				0976738A2499888000A94376 /* BottomDelegate.swift in Sources */,
 				09C64F1C2492E59800D7FF28 /* FloatingTextField.swift in Sources */,
 				093FE04624901E7A0086E120 /* ViewCodable.swift in Sources */,
 				0931313624903D91004BCB76 /* UIFont+customFonts.swift in Sources */,
 				09C433B72488ACF8006731C8 /* ViewController.swift in Sources */,
 				09313130249039C3004BCB76 /* Registrable.swift in Sources */,
 				09F0D07424916C59001A0E18 /* ContactViewController.swift in Sources */,
+				09767388249981F300A94376 /* WKWebView+load.swift in Sources */,
 				094A7AEF2493350800A3CEB2 /* Bindable.swift in Sources */,
 				09663EF724994D0C00F043F4 /* SeparatorTableViewCell.swift in Sources */,
 				09F0D0792491CB67001A0E18 /* InvestmentViewController.swift in Sources */,

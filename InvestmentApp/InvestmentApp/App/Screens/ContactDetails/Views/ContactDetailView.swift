@@ -9,7 +9,7 @@
 import UIKit
 
 class ContactDetailView: UIView {
-    weak var delegateHeight: ContactViewDelegate?
+    weak var delegateHeight: BottomDelegate?
     var coordinator: ContactDetailFlow?
     
     lazy var greetingMessage: UILabel = {
@@ -54,7 +54,7 @@ class ContactDetailView: UIView {
     }
     
     func getDelegate() {
-        delegateHeight?.getAnchor(constraint: sendAgainMessage.bottomAnchor)
+        delegateHeight?.getBottomAnchor(constraint: sendAgainMessage.bottomAnchor)
     }
     
     @objc func popView() {

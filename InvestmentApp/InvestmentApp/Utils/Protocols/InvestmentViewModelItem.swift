@@ -11,6 +11,7 @@ import Foundation
 enum InvestmentViewModelItemType: Int, CaseIterable {
     case introView = 0
     case moreInfo
+    case separator
     case info
     case downInfo
     case investButton

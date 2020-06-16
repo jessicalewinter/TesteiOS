@@ -23,7 +23,8 @@ class InvestmentView: UIView {
         tableView.registerCell(IntroTableViewCell.self)
         tableView.registerCell(MoreInfoTableViewCell.self)
         tableView.registerCell(MoreInfoPeriodTableViewCell.self)
-        
+        tableView.registerCell(InfoTableViewCell.self)
+        tableView.registerCell(SeparatorTableViewCell.self)
         return tableView
     }()
     
@@ -38,7 +39,6 @@ class InvestmentView: UIView {
         self.dataSource = InvestmentDataSource(viewModel: viewModel)
         setupView()
         bindtoViewModel()
-        
     }
     
     required init?(coder: NSCoder) {

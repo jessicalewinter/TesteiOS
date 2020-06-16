@@ -7,48 +7,21 @@
 //
 
 import UIKit
-class PeriodConstants {
-    weak var viewModel: InvestmentViewModel?
-    
-    var periodNames = ["No mês", "No ano", "12 meses"]
-    var month: TimePeriod
-    var year: TimePeriod
-    var twelveMonths: TimePeriod
-    
-    var allNumbers = [[String]]()
-    
-    init(month: TimePeriod, year: TimePeriod, twelveMonths: TimePeriod) {
-        self.month = month
-        self.year = year
-        self.twelveMonths = twelveMonths
-        fetchFromViewModel()
-    }
-    
-    func fetchFromViewModel() {
-        let mothNumbers = ["\(month.fund)%", "\(month.cdi)%"]
-        let yearNumbers = ["\(year.fund)%", "\(year.cdi)%"]
-        let twelveNumbers = ["\(twelveMonths.fund)%", "\(twelveMonths.cdi)%"]
-        
-        allNumbers = [mothNumbers, yearNumbers, twelveNumbers]
-    }
-}
+
 class InvestmentViewModel: DefaultViewModel {
     var getAlertWithError: StringClosure?
     var needReloadItems: VoidClosure?
     var isLoading: BooleanClosure?
     
     var items = [InvestmentViewModelItem]()
-    lazy var periodConstants: PeriodConstants = {
-        let period = PeriodConstants(month: self.moreInfo.month, year: self.moreInfo.year, twelveMonths: self.moreInfo.twelveMonths)
+    lazy var periodConstants: PeriodFormat = {
+        let period = PeriodFormat(month: self.moreInfo.month, year: self.moreInfo.year, twelveMonths: self.moreInfo.twelveMonths)
         return period
     }()
     
-    init() {
-        
-    }
     var fund: Fund?
     var screen: Screen {
-        // swift_lint:disable line_length
+        // swift_lint: disable line_length
         return fund?.screen ?? Screen(title: "", fundName: "", whatIs: "", definition: "", riskTitle: "", risk: 0, infoTitle: "", moreInfo: MoreInfo(month: TimePeriod(fund: 8943, cdi: 4839), year: TimePeriod(fund: 6464, cdi: 484), twelveMonths: TimePeriod(fund: 3728372, cdi: 32093)), info: [], downInfo: [])
         
     }
@@ -75,6 +48,8 @@ class InvestmentViewModel: DefaultViewModel {
             return 1
         case .moreInfo:
             return 4
+        case .separator:
+            return 1
         case .info:
             return screen.info.count
         case .downInfo:
@@ -106,8 +81,13 @@ class InvestmentViewModel: DefaultViewModel {
                 cell.cdiLabel.text = periodConstants.allNumbers[indexPath.row - 1][1]
                 return cell
             }
+        case .separator:
+            let cell = tableView.dequeueReusableCell(for: indexPath) as SeparatorTableViewCell
+            return cell
         case .info:
-            let cell = tableView.dequeueReusableCell(for: indexPath) as IntroTableViewCell
+            let cell = tableView.dequeueReusableCell(for: indexPath) as InfoTableViewCell
+            cell.nameLabel.text = info[indexPath.row].name
+            cell.dataLabel.text = info[indexPath.row].data
             return cell
         case .downInfo:
             let cell = tableView.dequeueReusableCell(for: indexPath) as IntroTableViewCell

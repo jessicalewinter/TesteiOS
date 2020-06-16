@@ -90,7 +90,8 @@ class InvestmentViewModel: DefaultViewModel {
             cell.dataLabel.text = info[indexPath.row].data
             return cell
         case .downInfo:
-            let cell = tableView.dequeueReusableCell(for: indexPath) as IntroTableViewCell
+            let cell = tableView.dequeueReusableCell(for: indexPath) as DownInfoTableViewCell
+            cell.nameLabel.text = downInfo[indexPath.row].name
             return cell
         case .investButton:
             let cell = tableView.dequeueReusableCell(for: indexPath) as IntroTableViewCell

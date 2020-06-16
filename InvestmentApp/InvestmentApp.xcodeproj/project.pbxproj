@@ -55,6 +55,7 @@
 		09663EF3249947C000F043F4 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09663EF2249947C000F043F4 /* InfoTableViewCell.swift */; };
 		09663EF52499481700F043F4 /* PeriodFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09663EF42499481700F043F4 /* PeriodFormat.swift */; };
 		09663EF724994D0C00F043F4 /* SeparatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09663EF624994D0C00F043F4 /* SeparatorTableViewCell.swift */; };
+		09663EF9249952E600F043F4 /* DownInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09663EF8249952E600F043F4 /* DownInfoTableViewCell.swift */; };
 		0967403E2497A29900A6AD14 /* AlertDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967403D2497A29900A6AD14 /* AlertDelegate.swift */; };
 		096740402497A53E00A6AD14 /* UIViewController+createAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967403F2497A53E00A6AD14 /* UIViewController+createAlert.swift */; };
 		096740432497A95E00A6AD14 /* InvestmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096740422497A95E00A6AD14 /* InvestmentView.swift */; };
@@ -162,6 +163,7 @@
 		09663EF2249947C000F043F4 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		09663EF42499481700F043F4 /* PeriodFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodFormat.swift; sourceTree = "<group>"; };
 		09663EF624994D0C00F043F4 /* SeparatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorTableViewCell.swift; sourceTree = "<group>"; };
+		09663EF8249952E600F043F4 /* DownInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownInfoTableViewCell.swift; sourceTree = "<group>"; };
 		0967403D2497A29900A6AD14 /* AlertDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDelegate.swift; sourceTree = "<group>"; };
 		0967403F2497A53E00A6AD14 /* UIViewController+createAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+createAlert.swift"; sourceTree = "<group>"; };
 		096740422497A95E00A6AD14 /* InvestmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentView.swift; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 				09663EF0249922F400F043F4 /* MoreInfoPeriodTableViewCell.swift */,
 				09663EF2249947C000F043F4 /* InfoTableViewCell.swift */,
 				09663EF624994D0C00F043F4 /* SeparatorTableViewCell.swift */,
+				09663EF8249952E600F043F4 /* DownInfoTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -781,6 +784,7 @@
 				094A7B05249580EA00A3CEB2 /* ContactDetailViewController.swift in Sources */,
 				09C64F212492F84F00D7FF28 /* ValidationForm.swift in Sources */,
 				098551A12492D2BB005C0958 /* DefaultViewController.swift in Sources */,
+				09663EF9249952E600F043F4 /* DownInfoTableViewCell.swift in Sources */,
 				0931313824904F6E004BCB76 /* UIColor+convenienceInit.swift in Sources */,
 				096740452497AA0500A6AD14 /* InvestmentViewModel.swift in Sources */,
 				096740402497A53E00A6AD14 /* UIViewController+createAlert.swift in Sources */,

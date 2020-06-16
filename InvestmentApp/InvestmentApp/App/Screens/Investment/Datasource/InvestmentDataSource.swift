@@ -9,7 +9,11 @@
 import UIKit
 
 class InvestmentDataSource: NSObject, UITableViewDataSource {
-    var viewModel = InvestmentViewModel()
+    var viewModel: InvestmentViewModel
+    
+    init(viewModel: InvestmentViewModel) {
+        self.viewModel = viewModel
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.numberOfSections

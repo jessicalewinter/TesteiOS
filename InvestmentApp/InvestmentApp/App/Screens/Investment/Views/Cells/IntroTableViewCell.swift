@@ -10,24 +10,12 @@ import UIKit
 
 class IntroTableViewCell: UITableViewCell {
     lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.font = UIFont.smallMediumTitle
-        label.textColor = .lightText
-        label.text = "ablubleble"
+        let label = UILabel(with: UIFont.smallMediumTitle, and: .lightText)
         return label
     }()
     
     lazy var fundNameLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.font = UIFont.mediumTitle
-        label.textColor = .darkText
-        label.text = "ablubleble"
+        let label = UILabel(with: UIFont.mediumTitle, and: .darkText)
         return label
     }()
     
@@ -39,34 +27,17 @@ class IntroTableViewCell: UITableViewCell {
     }()
     
     lazy var whatIsLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        label.font = UIFont.normalMediumTitle
-        label.textColor = .lightText
-        label.text = "ablubleble"
+        let label = UILabel(with: UIFont.normalMediumTitle, and: .lightText)
         return label
     }()
     
     lazy var definitionLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.font = UIFont.normalLightTitle
-        label.textColor = .lightText
-        label.text = "ablubleble"
+        let label = UILabel(with: UIFont.normalLightTitle, and: .lightText)
         return label
     }()
     
     lazy var riskTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.font = UIFont.normalMediumTitle
-        label.textColor = .lightText
-        label.text = "ablubleble"
+        let label = UILabel(with: UIFont.normalMediumTitle, and: .lightText)
         return label
     }()
     

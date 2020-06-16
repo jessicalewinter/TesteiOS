@@ -21,16 +21,6 @@ class InvestmentViewController: DefaultViewController, UITextFieldDelegate {
         let shareButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: nil)
         shareButton.tintColor = .action
         navigationItem.rightBarButtonItem = shareButton
-        let viewzinha = RiskView()
-        viewzinha.translatesAutoresizingMaskIntoConstraints = false
-//        view.addSubview(viewzinha)
-//        NSLayoutConstraint.activate([
-//            viewzinha.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            viewzinha.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-////            viewzinha.heightAnchor.constraint(equalToConstant: 100),
-//            viewzinha.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8)
-//        ])
-        // Do any additional setup after loading the view.
     }
     
     override func loadView() {

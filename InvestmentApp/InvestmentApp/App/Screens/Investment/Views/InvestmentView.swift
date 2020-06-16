@@ -9,7 +9,7 @@
 import UIKit
 
 class InvestmentView: UIView {
-    let dataSource = InvestmentDataSource()
+    var dataSource: InvestmentDataSource!
     var viewModel = InvestmentViewModel()
     
     lazy var tableView: UITableView = {
@@ -18,11 +18,12 @@ class InvestmentView: UIView {
         tableView.isScrollEnabled = true
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
-        tableView.registerCell(IntroTableViewCell.self)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.dataSource = self.dataSource
-//        tableView.delegate = self
-//        table.estimatedRowHeight = 210
+        tableView.registerCell(IntroTableViewCell.self)
+        tableView.registerCell(MoreInfoTableViewCell.self)
+        tableView.registerCell(MoreInfoPeriodTableViewCell.self)
+        
         return tableView
     }()
     
@@ -34,9 +35,10 @@ class InvestmentView: UIView {
     
     init() {
         super.init(frame: .zero)
-        dataSource.viewModel = viewModel
+        self.dataSource = InvestmentDataSource(viewModel: viewModel)
         setupView()
         bindtoViewModel()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -85,7 +87,6 @@ extension InvestmentView: ViewCodable {
 
 extension InvestmentView: Bindable {
     func bindtoViewModel() {
-        viewModel.getFund()
         
         viewModel.isLoading = { [weak self] isLoading in
             guard let self = self else {return}
@@ -95,6 +96,13 @@ extension InvestmentView: Bindable {
                 self.stopLoading()
             }
         }
+        
+        viewModel.needReloadItems = { [weak self] in
+            guard let self = self else {return}
+            self.tableView.reloadData()
+        }
+        
+        viewModel.getFund()
     }
     
 }

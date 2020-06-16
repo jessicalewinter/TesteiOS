@@ -7,40 +7,50 @@
 //
 
 import UIKit
-
+class PeriodConstants {
+    weak var viewModel: InvestmentViewModel?
+    
+    var periodNames = ["No mês", "No ano", "12 meses"]
+    var month: TimePeriod
+    var year: TimePeriod
+    var twelveMonths: TimePeriod
+    
+    var allNumbers = [[String]]()
+    
+    init(month: TimePeriod, year: TimePeriod, twelveMonths: TimePeriod) {
+        self.month = month
+        self.year = year
+        self.twelveMonths = twelveMonths
+        fetchFromViewModel()
+    }
+    
+    func fetchFromViewModel() {
+        let mothNumbers = ["\(month.fund)%", "\(month.cdi)%"]
+        let yearNumbers = ["\(year.fund)%", "\(year.cdi)%"]
+        let twelveNumbers = ["\(twelveMonths.fund)%", "\(twelveMonths.cdi)%"]
+        
+        allNumbers = [mothNumbers, yearNumbers, twelveNumbers]
+    }
+}
 class InvestmentViewModel: DefaultViewModel {
     var getAlertWithError: StringClosure?
     var needReloadItems: VoidClosure?
     var isLoading: BooleanClosure?
     
     var items = [InvestmentViewModelItem]()
+    lazy var periodConstants: PeriodConstants = {
+        let period = PeriodConstants(month: self.moreInfo.month, year: self.moreInfo.year, twelveMonths: self.moreInfo.twelveMonths)
+        return period
+    }()
+    
+    init() {
+        
+    }
     var fund: Fund?
     var screen: Screen {
         // swift_lint:disable line_length
         return fund?.screen ?? Screen(title: "", fundName: "", whatIs: "", definition: "", riskTitle: "", risk: 0, infoTitle: "", moreInfo: MoreInfo(month: TimePeriod(fund: 8943, cdi: 4839), year: TimePeriod(fund: 6464, cdi: 484), twelveMonths: TimePeriod(fund: 3728372, cdi: 32093)), info: [], downInfo: [])
-    }
-    var title: String {
-        return screen.title
-    }
-    
-    var fundName: String {
-        return screen.fundName
-    }
-    
-    var whatIs: String {
-        return screen.whatIs
-    }
-    
-    var definition: String {
-        return screen.definition
-    }
-    
-    var riskTitle: String {
-        return screen.riskTitle
-    }
-    
-    var introItems: [String] {
-        return [screen.title, screen.fundName, screen.whatIs, screen.definition, screen.riskTitle]
+        
     }
     
     var moreInfo: MoreInfo {
@@ -64,9 +74,8 @@ class InvestmentViewModel: DefaultViewModel {
         case .introView:
             return 1
         case .moreInfo:
-            return 3
+            return 4
         case .info:
-            // getting error on here fetching api
             return screen.info.count
         case .downInfo:
             return screen.downInfo.count
@@ -86,8 +95,17 @@ class InvestmentViewModel: DefaultViewModel {
             cell.riskTitleLabel.text = screen.riskTitle
             return cell
         case .moreInfo:
-            let cell = tableView.dequeueReusableCell(for: indexPath) as IntroTableViewCell
-            return cell
+            if indexPath.row == 0 {
+                let cell = tableView.dequeueReusableCell(for: indexPath) as MoreInfoTableViewCell
+                cell.moreInfoLabel.text = screen.infoTitle
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(for: indexPath) as MoreInfoPeriodTableViewCell
+                cell.periodLabel.text = periodConstants.periodNames[indexPath.row - 1]
+                cell.fundLabel.text = periodConstants.allNumbers[indexPath.row - 1][0]
+                cell.cdiLabel.text = periodConstants.allNumbers[indexPath.row - 1][1]
+                return cell
+            }
         case .info:
             let cell = tableView.dequeueReusableCell(for: indexPath) as IntroTableViewCell
             return cell

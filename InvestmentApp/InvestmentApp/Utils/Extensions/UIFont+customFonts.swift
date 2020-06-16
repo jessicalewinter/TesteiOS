@@ -19,6 +19,7 @@ enum FontSizes: CGFloat {
 
 extension UIFont {
     static let smallMediumTitle = UIFont(name: "DINPro-Medium", size: FontSizes.smallSize.rawValue)
+    static let smallRegularTitle = UIFont(name: "DINPro-Regular", size: FontSizes.smallSize.rawValue)
     static let mediumTitle = UIFont(name: "DINPro-Medium", size: FontSizes.titleSize.rawValue)
     static let normalMediumTitle = UIFont(name: "DINPro-Medium", size: FontSizes.normalSize.rawValue)
     static let normalRegularTitle = UIFont(name: "DINPro-Regular", size: FontSizes.normalSize.rawValue)

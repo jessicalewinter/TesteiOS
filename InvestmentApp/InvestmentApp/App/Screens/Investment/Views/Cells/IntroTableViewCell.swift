@@ -12,6 +12,7 @@ class IntroTableViewCell: UITableViewCell {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
         label.textAlignment = .center
         label.font = UIFont.smallMediumTitle
         label.textColor = .lightText
@@ -22,6 +23,7 @@ class IntroTableViewCell: UITableViewCell {
     lazy var fundNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
         label.textAlignment = .center
         label.font = UIFont.mediumTitle
         label.textColor = .darkText
@@ -46,9 +48,10 @@ class IntroTableViewCell: UITableViewCell {
         return label
     }()
     
-    lazy var descriptionLabel: UILabel = {
+    lazy var definitionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
         label.textAlignment = .center
         label.font = UIFont.normalLightTitle
         label.textColor = .lightText
@@ -59,6 +62,7 @@ class IntroTableViewCell: UITableViewCell {
     lazy var riskTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
         label.textAlignment = .center
         label.font = UIFont.normalMediumTitle
         label.textColor = .lightText
@@ -90,7 +94,7 @@ extension IntroTableViewCell: ViewCodable {
             fundNameLabel,
             separatorImage,
             whatIsLabel,
-            descriptionLabel,
+            definitionLabel,
             riskTitleLabel,
             riskView
         ])
@@ -123,13 +127,13 @@ extension IntroTableViewCell: ViewCodable {
         ])
         
         NSLayoutConstraint.activate([
-            descriptionLabel.topAnchor.constraint(equalTo: whatIsLabel.bottomAnchor, constant: 10),
-            descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            definitionLabel.topAnchor.constraint(equalTo: whatIsLabel.bottomAnchor, constant: 10),
+            definitionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            definitionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
         
         NSLayoutConstraint.activate([
-            riskTitleLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 10),
+            riskTitleLabel.topAnchor.constraint(equalTo: definitionLabel.bottomAnchor, constant: 10),
             riskTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             riskTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])

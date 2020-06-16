@@ -26,6 +26,12 @@ class InvestmentView: UIView {
         return tableView
     }()
     
+    lazy var loadingView: LoadingView = {
+        let loading = LoadingView()
+        loading.translatesAutoresizingMaskIntoConstraints = false
+        return loading
+    }()
+    
     init() {
         super.init(frame: .zero)
         dataSource.viewModel = viewModel
@@ -36,11 +42,24 @@ class InvestmentView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func startLoading() {
+        loadingView.isHidden = false
+        loadingView.activityIndicator.startAnimating()
+    }
+    
+    func stopLoading() {
+        loadingView.activityIndicator.stopAnimating()
+        loadingView.isHidden = true
+    }
 }
 
 extension InvestmentView: ViewCodable {
     func buildViewHierarchy() {
-        addSubview(tableView)
+        addSubViews([
+            tableView,
+            loadingView
+        ])
     }
     
     func setupConstraints() {
@@ -49,6 +68,13 @@ extension InvestmentView: ViewCodable {
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -60)
+        ])
+        
+        NSLayoutConstraint.activate([
+            loadingView.topAnchor.constraint(equalTo: topAnchor),
+            loadingView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            loadingView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            loadingView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
     
@@ -60,7 +86,15 @@ extension InvestmentView: ViewCodable {
 extension InvestmentView: Bindable {
     func bindtoViewModel() {
         viewModel.getFund()
+        
+        viewModel.isLoading = { [weak self] isLoading in
+            guard let self = self else {return}
+            if isLoading {
+                self.startLoading()
+            } else {
+                self.stopLoading()
+            }
+        }
     }
-    
     
 }

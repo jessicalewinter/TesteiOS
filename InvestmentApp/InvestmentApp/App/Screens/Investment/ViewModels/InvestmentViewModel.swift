@@ -11,12 +11,13 @@ import UIKit
 class InvestmentViewModel: DefaultViewModel {
     var getAlertWithError: StringClosure?
     var needReloadItems: VoidClosure?
+    var isLoading: BooleanClosure?
     
     var items = [InvestmentViewModelItem]()
     var fund: Fund?
     var screen: Screen {
-        guard let fund = fund else {fatalError("could not find fund")}
-        return fund.screen
+        // swift_lint:disable line_length
+        return fund?.screen ?? Screen(title: "", fundName: "", whatIs: "", definition: "", riskTitle: "", risk: 0, infoTitle: "", moreInfo: MoreInfo(month: TimePeriod(fund: 8943, cdi: 4839), year: TimePeriod(fund: 6464, cdi: 484), twelveMonths: TimePeriod(fund: 3728372, cdi: 32093)), info: [], downInfo: [])
     }
     var title: String {
         return screen.title
@@ -66,9 +67,9 @@ class InvestmentViewModel: DefaultViewModel {
             return 3
         case .info:
             // getting error on here fetching api
-            return 4
+            return screen.info.count
         case .downInfo:
-            return 5
+            return screen.downInfo.count
         case .investButton:
             return 1
         }
@@ -78,6 +79,11 @@ class InvestmentViewModel: DefaultViewModel {
         switch InvestmentViewModelItemType(rawValue: indexPath.section)! {
         case .introView:
             let cell = tableView.dequeueReusableCell(for: indexPath) as IntroTableViewCell
+            cell.titleLabel.text = screen.title
+            cell.fundNameLabel.text = screen.fundName
+            cell.whatIsLabel.text = screen.whatIs
+            cell.definitionLabel.text = screen.definition
+            cell.riskTitleLabel.text = screen.riskTitle
             return cell
         case .moreInfo:
             let cell = tableView.dequeueReusableCell(for: indexPath) as IntroTableViewCell
@@ -95,10 +101,14 @@ class InvestmentViewModel: DefaultViewModel {
     }
     
     func getFund() {
+        self.isLoading?(true)
+        
         InvestmentRepository.getFund {[weak self] (result) in
             guard let self = self else {return}
             
             DispatchQueue.main.async {
+                self.isLoading?(false)
+                
                 switch result {
                 case .failure(let error):
                     self.getAlertWithError?(error.localizedDescription)

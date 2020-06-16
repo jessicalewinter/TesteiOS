@@ -56,6 +56,9 @@
 		09663EF52499481700F043F4 /* PeriodFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09663EF42499481700F043F4 /* PeriodFormat.swift */; };
 		09663EF724994D0C00F043F4 /* SeparatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09663EF624994D0C00F043F4 /* SeparatorTableViewCell.swift */; };
 		09663EF9249952E600F043F4 /* DownInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09663EF8249952E600F043F4 /* DownInfoTableViewCell.swift */; };
+		09663EFB2499580400F043F4 /* InvestButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09663EFA2499580400F043F4 /* InvestButtonTableViewCell.swift */; };
+		09663EFD24995D0500F043F4 /* WebViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09663EFC24995D0500F043F4 /* WebViewCoordinator.swift */; };
+		09663F0124995DD800F043F4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09663F0024995DD800F043F4 /* WebViewController.swift */; };
 		0967403E2497A29900A6AD14 /* AlertDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967403D2497A29900A6AD14 /* AlertDelegate.swift */; };
 		096740402497A53E00A6AD14 /* UIViewController+createAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967403F2497A53E00A6AD14 /* UIViewController+createAlert.swift */; };
 		096740432497A95E00A6AD14 /* InvestmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096740422497A95E00A6AD14 /* InvestmentView.swift */; };
@@ -164,6 +167,9 @@
 		09663EF42499481700F043F4 /* PeriodFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodFormat.swift; sourceTree = "<group>"; };
 		09663EF624994D0C00F043F4 /* SeparatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorTableViewCell.swift; sourceTree = "<group>"; };
 		09663EF8249952E600F043F4 /* DownInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownInfoTableViewCell.swift; sourceTree = "<group>"; };
+		09663EFA2499580400F043F4 /* InvestButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestButtonTableViewCell.swift; sourceTree = "<group>"; };
+		09663EFC24995D0500F043F4 /* WebViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewCoordinator.swift; sourceTree = "<group>"; };
+		09663F0024995DD800F043F4 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		0967403D2497A29900A6AD14 /* AlertDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDelegate.swift; sourceTree = "<group>"; };
 		0967403F2497A53E00A6AD14 /* UIViewController+createAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+createAlert.swift"; sourceTree = "<group>"; };
 		096740422497A95E00A6AD14 /* InvestmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentView.swift; sourceTree = "<group>"; };
@@ -384,8 +390,25 @@
 				09663EF2249947C000F043F4 /* InfoTableViewCell.swift */,
 				09663EF624994D0C00F043F4 /* SeparatorTableViewCell.swift */,
 				09663EF8249952E600F043F4 /* DownInfoTableViewCell.swift */,
+				09663EFA2499580400F043F4 /* InvestButtonTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		09663EFE24995DBE00F043F4 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				09663EFF24995DCA00F043F4 /* Views */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		09663EFF24995DCA00F043F4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				09663F0024995DD800F043F4 /* WebViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		0967403C2497A27300A6AD14 /* Delegates */ = {
@@ -495,6 +518,7 @@
 				09F0D07D2491CBFA001A0E18 /* ContactCoordinator.swift */,
 				09F0D0802491CF13001A0E18 /* TabBarCoordinator.swift */,
 				094A7AFF2495797900A3CEB2 /* ContactDetailCoordinator.swift */,
+				09663EFC24995D0500F043F4 /* WebViewCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -511,6 +535,7 @@
 		09F0D06C24915811001A0E18 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				09663EFE24995DBE00F043F4 /* WebView */,
 				094A7B0124957F3100A3CEB2 /* ContactDetails */,
 				09F0D06E24915827001A0E18 /* Contact */,
 				09F0D06D2491581F001A0E18 /* Investment */,
@@ -792,6 +817,7 @@
 				09F0D0852491D5B0001A0E18 /* UITabBarController+selectedImage.swift in Sources */,
 				096740432497A95E00A6AD14 /* InvestmentView.swift in Sources */,
 				095915792497C7EB001E1186 /* IntroTableViewCell.swift in Sources */,
+				09663EFD24995D0500F043F4 /* WebViewCoordinator.swift in Sources */,
 				0959157D2498144D001E1186 /* RiskView.swift in Sources */,
 				0948EEC1249883AB002F629F /* LoadingView.swift in Sources */,
 				094A7B072496DA3000A3CEB2 /* ContactDetailView.swift in Sources */,
@@ -806,9 +832,11 @@
 				094A7AF12493CA7900A3CEB2 /* FloatingTextField+convenienceInit.swift in Sources */,
 				09F0D06A249150D0001A0E18 /* AppCoordinator.swift in Sources */,
 				0959157B2497DE64001E1186 /* InvestmentViewModelItem.swift in Sources */,
+				09663EFB2499580400F043F4 /* InvestButtonTableViewCell.swift in Sources */,
 				0967403E2497A29900A6AD14 /* AlertDelegate.swift in Sources */,
 				09663EEF24991AAE00F043F4 /* MoreInfoTableViewCell.swift in Sources */,
 				0931312E249038FE004BCB76 /* Identifiable.swift in Sources */,
+				09663F0124995DD800F043F4 /* WebViewController.swift in Sources */,
 				093FE031248FD6BE0086E120 /* InvestmentService.swift in Sources */,
 				093FE02C248FD61C0086E120 /* Fund.swift in Sources */,
 			);

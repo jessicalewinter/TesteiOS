@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol InvestmentFlow: AnyObject {
+    func coordinateToWebView()
+}
+
 class InvestmentCoordinator: Coordinator {
     weak var navigationController: UINavigationController?
     
@@ -17,6 +21,14 @@ class InvestmentCoordinator: Coordinator {
     
     func start() {
         let investmentViewController = InvestmentViewController()
+        investmentViewController.investmentView.viewModel.coordinator = self
         navigationController?.pushViewController(investmentViewController, animated: false)
+    }
+}
+
+extension InvestmentCoordinator: InvestmentFlow {
+    func coordinateToWebView() {
+        let webViewCoordinator = WebViewCoordinator(navigationController: navigationController!)
+        coordinate(to: webViewCoordinator)
     }
 }

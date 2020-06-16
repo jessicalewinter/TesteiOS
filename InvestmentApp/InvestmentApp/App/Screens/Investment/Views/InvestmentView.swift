@@ -26,6 +26,7 @@ class InvestmentView: UIView {
         tableView.registerCell(InfoTableViewCell.self)
         tableView.registerCell(SeparatorTableViewCell.self)
         tableView.registerCell(DownInfoTableViewCell.self)
+        tableView.registerCell(InvestButtonTableViewCell.self)
         return tableView
     }()
     

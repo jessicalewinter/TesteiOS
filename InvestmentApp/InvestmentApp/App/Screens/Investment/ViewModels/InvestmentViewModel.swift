@@ -59,6 +59,8 @@ class InvestmentViewModel: DefaultViewModel {
         }
     }
     
+    var coordinator: InvestmentFlow?
+    
     func cellFor(tableView: UITableView, and indexPath: IndexPath) -> UITableViewCell {
         switch InvestmentViewModelItemType(rawValue: indexPath.section)! {
         case .introView:
@@ -94,7 +96,12 @@ class InvestmentViewModel: DefaultViewModel {
             cell.nameLabel.text = downInfo[indexPath.row].name
             return cell
         case .investButton:
-            let cell = tableView.dequeueReusableCell(for: indexPath) as IntroTableViewCell
+            let cell = tableView.dequeueReusableCell(for: indexPath) as InvestButtonTableViewCell
+            cell.openWebView = { [weak self] in
+                guard let self = self else {return}
+                print("putz ta funcitonando")
+                self.coordinator?.coordinateToWebView()
+            }
             return cell
         }
     }

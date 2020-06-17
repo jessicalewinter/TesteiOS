@@ -66,6 +66,7 @@
 		096740452497AA0500A6AD14 /* InvestmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096740442497AA0500A6AD14 /* InvestmentViewModel.swift */; };
 		09767388249981F300A94376 /* WKWebView+load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09767387249981F300A94376 /* WKWebView+load.swift */; };
 		0976738A2499888000A94376 /* BottomDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097673892499888000A94376 /* BottomDelegate.swift */; };
+		0976738D2499A0A300A94376 /* KeyboardFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976738C2499A0A300A94376 /* KeyboardFrame.swift */; };
 		098551A12492D2BB005C0958 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098551A02492D2BB005C0958 /* DefaultViewController.swift */; };
 		09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B22488ACF8006731C8 /* AppDelegate.swift */; };
 		09C433B72488ACF8006731C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B62488ACF8006731C8 /* ViewController.swift */; };
@@ -180,6 +181,7 @@
 		096740442497AA0500A6AD14 /* InvestmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentViewModel.swift; sourceTree = "<group>"; };
 		09767387249981F300A94376 /* WKWebView+load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKWebView+load.swift"; sourceTree = "<group>"; };
 		097673892499888000A94376 /* BottomDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDelegate.swift; sourceTree = "<group>"; };
+		0976738C2499A0A300A94376 /* KeyboardFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrame.swift; sourceTree = "<group>"; };
 		098551A02492D2BB005C0958 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		09C433AF2488ACF8006731C8 /* InvestmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvestmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C433B22488ACF8006731C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 		093FE024248FD0DE0086E120 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0976738B2499A08E00A94376 /* KeyboardFrame */,
 				094A7AE9249323AA00A3CEB2 /* Enums */,
 				09C64F1F2492F82E00D7FF28 /* RegexValidation */,
 				093FE04B24901F100086E120 /* Extensions */,
@@ -443,6 +446,14 @@
 				09F0D0782491CB67001A0E18 /* InvestmentViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0976738B2499A08E00A94376 /* KeyboardFrame */ = {
+			isa = PBXGroup;
+			children = (
+				0976738C2499A0A300A94376 /* KeyboardFrame.swift */,
+			);
+			path = KeyboardFrame;
 			sourceTree = "<group>";
 		};
 		0985519F2492D2A2005C0958 /* ViewController */ = {
@@ -828,6 +839,7 @@
 				09F0D06524907795001A0E18 /* UIColor+actionColors.swift in Sources */,
 				094A7B05249580EA00A3CEB2 /* ContactDetailViewController.swift in Sources */,
 				09C64F212492F84F00D7FF28 /* ValidationForm.swift in Sources */,
+				0976738D2499A0A300A94376 /* KeyboardFrame.swift in Sources */,
 				098551A12492D2BB005C0958 /* DefaultViewController.swift in Sources */,
 				09663EF9249952E600F043F4 /* DownInfoTableViewCell.swift in Sources */,
 				0931313824904F6E004BCB76 /* UIColor+convenienceInit.swift in Sources */,

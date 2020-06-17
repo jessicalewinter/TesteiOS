@@ -13,7 +13,7 @@ class ContactView: UIView {
     weak var delegateHeight: ContactViewDelegate?
     weak var alertDelegate: AlertDelegate?
     var coordinator: ContactFlow?
-    var activeTextField = UITextField()
+    var activeTextField: UITextField?
     
     lazy var textFields: [FloatingTextField] = {
         let textFields = [nameField, emailField, phoneField]
@@ -69,7 +69,7 @@ class ContactView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+   
     func getDelegate() {
         delegateHeight?.getTopAnchor(constraint: nameField.topAnchor)
     }
@@ -97,7 +97,6 @@ class ContactView: UIView {
         } else {
             coordinator?.coordinateToDetail()
         }
-        
     }
 }
 
@@ -170,6 +169,10 @@ extension ContactView: Bindable {
 extension ContactView: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.activeTextField = textField
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.activeTextField = nil
     }
     
     func verifyValidate() {

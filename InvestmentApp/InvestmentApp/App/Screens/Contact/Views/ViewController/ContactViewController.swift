@@ -17,12 +17,15 @@ class ContactViewController: DefaultViewController, UITextFieldDelegate {
         return view
     }()
     
+    var keyframe: KeyboardFrame?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Contato"
         contactView.getDelegate()
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true
+        keyframe = KeyboardFrame(view: contactView, and: contactView.activeTextField)
     }
     
     override func loadView() {

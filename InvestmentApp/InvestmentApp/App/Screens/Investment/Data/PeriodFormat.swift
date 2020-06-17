@@ -9,8 +9,6 @@
 import Foundation
 
 class PeriodFormat {
-    weak var viewModel: InvestmentViewModel?
-    
     var periodNames = ["No mês", "No ano", "12 meses"]
     var month: TimePeriod
     var year: TimePeriod
@@ -22,14 +20,14 @@ class PeriodFormat {
         self.month = month
         self.year = year
         self.twelveMonths = twelveMonths
-        fetchFromViewModel()
+        allNumbers = formatNumber
     }
     
-    func fetchFromViewModel() {
+    var formatNumber: [[String]] {
         let monthNumbers = ["\(month.fund)%", "\(month.cdi)%"]
         let yearNumbers = ["\(year.fund)%", "\(year.cdi)%"]
         let twelveNumbers = ["\(twelveMonths.fund)%", "\(twelveMonths.cdi)%"]
         
-        allNumbers = [monthNumbers, yearNumbers, twelveNumbers]
+        return [monthNumbers, yearNumbers, twelveNumbers]
     }
 }

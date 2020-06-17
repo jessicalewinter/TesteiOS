@@ -24,9 +24,9 @@ enum FormType {
     var errorMessage: String {
         switch self {
         case .email:
-            return "Email não é válido. Digite no formato nome@email.com"
+            return "Email não é válido."
         case .phone:
-            return "Número não é válido. Digite no formato 91234-5678"
+            return "Número não é válido."
         }
     }
 }

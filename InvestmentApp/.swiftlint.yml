@@ -1,0 +1,27 @@
+disabled_rules: # rule identifiers to exclude from running
+ - trailing_whitespace
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+ - Carthage
+ - Pods
+
+line_length:
+  warning: 250
+  error: 400
+  ignores_comments: true
+  ignores_urls: true
+  ignores_function_declarations: true
+  ### works up until this config rule
+  ignores_interpolated_strings: true
+force_cast: warning #implicitly
+force_try:
+  severity: warning #explicitly
+# rules that have both warning and error levels, can set just the warning level
+# implicitly
+type_body_length:
+  - 300 # warning
+  - 400 # error
+# or they can set both explicitly
+file_length:
+  warning: 500
+  error: 1200
+

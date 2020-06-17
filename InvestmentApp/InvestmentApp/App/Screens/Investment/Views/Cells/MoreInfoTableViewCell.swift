@@ -11,6 +11,7 @@ import UIKit
 class MoreInfoTableViewCell: UITableViewCell {
     lazy var moreInfoLabel: UILabel = {
         let label = UILabel(with: UIFont.normalMediumTitle, and: .lightText)
+        label.textAlignment = .left
         return label
     }()
     
@@ -49,8 +50,8 @@ extension MoreInfoTableViewCell: ViewCodable {
     func setupConstraints() {
         NSLayoutConstraint.activate([
             moreInfoLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            moreInfoLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            moreInfoLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            moreInfoLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            moreInfoLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
         
         NSLayoutConstraint.activate([
@@ -60,7 +61,7 @@ extension MoreInfoTableViewCell: ViewCodable {
         
         NSLayoutConstraint.activate([
             detailCDILabel.topAnchor.constraint(equalTo: moreInfoLabel.bottomAnchor, constant: 20),
-            detailCDILabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            detailCDILabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             detailCDILabel.leadingAnchor.constraint(equalTo: detailFundLabel.trailingAnchor, constant: 30),
             detailCDILabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])

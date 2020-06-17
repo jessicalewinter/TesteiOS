@@ -53,7 +53,7 @@ extension MoreInfoPeriodTableViewCell: ViewCodable {
     func setupConstraints() {
         NSLayoutConstraint.activate([
             periodLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            periodLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            periodLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             periodLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
         
@@ -64,7 +64,7 @@ extension MoreInfoPeriodTableViewCell: ViewCodable {
         
         NSLayoutConstraint.activate([
             cdiLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            cdiLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            cdiLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             cdiLabel.leadingAnchor.constraint(equalTo: fundLabel.trailingAnchor, constant: 30),
             cdiLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])

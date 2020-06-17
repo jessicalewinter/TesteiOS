@@ -67,6 +67,8 @@
 		09767388249981F300A94376 /* WKWebView+load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09767387249981F300A94376 /* WKWebView+load.swift */; };
 		0976738A2499888000A94376 /* BottomDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097673892499888000A94376 /* BottomDelegate.swift */; };
 		0976738D2499A0A300A94376 /* KeyboardFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976738C2499A0A300A94376 /* KeyboardFrame.swift */; };
+		0976738F2499B72C00A94376 /* UIToolbar+doneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976738E2499B72C00A94376 /* UIToolbar+doneButton.swift */; };
+		097673912499DAD300A94376 /* MaskText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097673902499DAD300A94376 /* MaskText.swift */; };
 		098551A12492D2BB005C0958 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098551A02492D2BB005C0958 /* DefaultViewController.swift */; };
 		09C433B32488ACF8006731C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B22488ACF8006731C8 /* AppDelegate.swift */; };
 		09C433B72488ACF8006731C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C433B62488ACF8006731C8 /* ViewController.swift */; };
@@ -182,6 +184,8 @@
 		09767387249981F300A94376 /* WKWebView+load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKWebView+load.swift"; sourceTree = "<group>"; };
 		097673892499888000A94376 /* BottomDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDelegate.swift; sourceTree = "<group>"; };
 		0976738C2499A0A300A94376 /* KeyboardFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrame.swift; sourceTree = "<group>"; };
+		0976738E2499B72C00A94376 /* UIToolbar+doneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIToolbar+doneButton.swift"; sourceTree = "<group>"; };
+		097673902499DAD300A94376 /* MaskText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskText.swift; sourceTree = "<group>"; };
 		098551A02492D2BB005C0958 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		09C433AF2488ACF8006731C8 /* InvestmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvestmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C433B22488ACF8006731C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -253,7 +257,7 @@
 			children = (
 				0976738B2499A08E00A94376 /* KeyboardFrame */,
 				094A7AE9249323AA00A3CEB2 /* Enums */,
-				09C64F1F2492F82E00D7FF28 /* RegexValidation */,
+				09C64F1F2492F82E00D7FF28 /* Validation */,
 				093FE04B24901F100086E120 /* Extensions */,
 				093FE025248FD0E50086E120 /* Protocols */,
 			);
@@ -325,6 +329,7 @@
 				0967403F2497A53E00A6AD14 /* UIViewController+createAlert.swift */,
 				09663EEC2499142F00F043F4 /* UILabel+customLabel.swift */,
 				09767387249981F300A94376 /* WKWebView+load.swift */,
+				0976738E2499B72C00A94376 /* UIToolbar+doneButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -529,12 +534,13 @@
 			path = TextField;
 			sourceTree = "<group>";
 		};
-		09C64F1F2492F82E00D7FF28 /* RegexValidation */ = {
+		09C64F1F2492F82E00D7FF28 /* Validation */ = {
 			isa = PBXGroup;
 			children = (
 				09C64F202492F84F00D7FF28 /* ValidationForm.swift */,
+				097673902499DAD300A94376 /* MaskText.swift */,
 			);
-			path = RegexValidation;
+			path = Validation;
 			sourceTree = "<group>";
 		};
 		09F0D06624915075001A0E18 /* Coordinator */ = {
@@ -835,6 +841,7 @@
 				093FE02F248FD68B0086E120 /* InvestmentRepository.swift in Sources */,
 				09F0D07C2491CBEC001A0E18 /* InvestmentCoordinator.swift in Sources */,
 				093FE02A248FD5EE0086E120 /* Form.swift in Sources */,
+				097673912499DAD300A94376 /* MaskText.swift in Sources */,
 				09663EF3249947C000F043F4 /* InfoTableViewCell.swift in Sources */,
 				09F0D06524907795001A0E18 /* UIColor+actionColors.swift in Sources */,
 				094A7B05249580EA00A3CEB2 /* ContactDetailViewController.swift in Sources */,
@@ -868,6 +875,7 @@
 				0967403E2497A29900A6AD14 /* AlertDelegate.swift in Sources */,
 				09663EEF24991AAE00F043F4 /* MoreInfoTableViewCell.swift in Sources */,
 				0931312E249038FE004BCB76 /* Identifiable.swift in Sources */,
+				0976738F2499B72C00A94376 /* UIToolbar+doneButton.swift in Sources */,
 				09663F0124995DD800F043F4 /* WebViewController.swift in Sources */,
 				093FE031248FD6BE0086E120 /* InvestmentService.swift in Sources */,
 				093FE02C248FD61C0086E120 /* Fund.swift in Sources */,

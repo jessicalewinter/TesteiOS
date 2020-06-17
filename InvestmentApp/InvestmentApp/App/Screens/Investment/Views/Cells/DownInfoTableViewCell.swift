@@ -53,7 +53,7 @@ extension DownInfoTableViewCell: ViewCodable {
     func setupConstraints() {
         NSLayoutConstraint.activate([
             nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
         
@@ -64,7 +64,7 @@ extension DownInfoTableViewCell: ViewCodable {
         
         NSLayoutConstraint.activate([
             downloadLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            downloadLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            downloadLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             downloadLabel.leadingAnchor.constraint(equalTo: downloadIamge.trailingAnchor, constant: 10),
             downloadLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])

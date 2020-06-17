@@ -99,7 +99,6 @@ class InvestmentViewModel: DefaultViewModel {
             let cell = tableView.dequeueReusableCell(for: indexPath) as InvestButtonTableViewCell
             cell.openWebView = { [weak self] in
                 guard let self = self else {return}
-                print("putz ta funcitonando")
                 self.coordinator?.coordinateToWebView()
             }
             return cell

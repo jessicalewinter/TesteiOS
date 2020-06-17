@@ -41,13 +41,13 @@ extension InfoTableViewCell: ViewCodable {
     func setupConstraints() {
         NSLayoutConstraint.activate([
             nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
         
         NSLayoutConstraint.activate([
             dataLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            dataLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            dataLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             dataLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
     }

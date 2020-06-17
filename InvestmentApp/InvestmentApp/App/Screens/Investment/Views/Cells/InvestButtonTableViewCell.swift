@@ -44,8 +44,8 @@ extension InvestButtonTableViewCell: ViewCodable {
     func setupConstraints() {
         NSLayoutConstraint.activate([
             investButton.topAnchor.constraint(equalTo: topAnchor, constant: 40),
-            investButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            investButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            investButton.leadingAnchor.constraint(equalTo: leadingAnchor),
+            investButton.trailingAnchor.constraint(equalTo: trailingAnchor),
             investButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -40),
             investButton.heightAnchor.constraint(equalToConstant: 50)
         ])

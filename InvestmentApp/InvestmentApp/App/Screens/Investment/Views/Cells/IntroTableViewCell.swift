@@ -74,46 +74,46 @@ extension IntroTableViewCell: ViewCodable {
     func setupConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
         
         NSLayoutConstraint.activate([
             fundNameLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
-            fundNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            fundNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            fundNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            fundNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
         
         NSLayoutConstraint.activate([
             separatorImage.topAnchor.constraint(equalTo: fundNameLabel.bottomAnchor, constant: 10),
-            separatorImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            separatorImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            separatorImage.leadingAnchor.constraint(equalTo: leadingAnchor),
+            separatorImage.trailingAnchor.constraint(equalTo: trailingAnchor),
             separatorImage.heightAnchor.constraint(equalToConstant: 10)
         ])
         
         NSLayoutConstraint.activate([
             whatIsLabel.topAnchor.constraint(equalTo: separatorImage.bottomAnchor, constant: 10),
-            whatIsLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            whatIsLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            whatIsLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            whatIsLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
         
         NSLayoutConstraint.activate([
             definitionLabel.topAnchor.constraint(equalTo: whatIsLabel.bottomAnchor, constant: 10),
-            definitionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            definitionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            definitionLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            definitionLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            riskTitleLabel.topAnchor.constraint(equalTo: definitionLabel.bottomAnchor, constant: 10),
-            riskTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            riskTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            riskTitleLabel.topAnchor.constraint(equalTo: definitionLabel.bottomAnchor, constant: 30),
+            riskTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            riskTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            riskView.topAnchor.constraint(equalTo: riskTitleLabel.bottomAnchor, constant: 10),
-            riskView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            riskView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            riskView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
+            riskView.topAnchor.constraint(equalTo: riskTitleLabel.bottomAnchor, constant: 30),
+            riskView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            riskView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            riskView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -30)
         ])
     }
 }

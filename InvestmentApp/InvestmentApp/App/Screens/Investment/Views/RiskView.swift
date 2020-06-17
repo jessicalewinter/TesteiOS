@@ -13,7 +13,7 @@ class RiskView: UIView {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
-        stack.distribution = .fillProportionally
+        stack.distribution = .fillEqually
         stack.alignment = .center
         stack.spacing = 3
         stack.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -23,7 +23,7 @@ class RiskView: UIView {
     func createRiskView(color: UIColor) -> UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        view.heightAnchor.constraint(equalToConstant: 10).isActive = true
 //        view.widthAnchor.constraint(equalToConstant: 120.0).isActive = true
         view.backgroundColor = color
         return view

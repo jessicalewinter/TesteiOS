@@ -17,7 +17,7 @@ enum FormType {
         case .email:
             return "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         case .phone:
-            return "(\\(?\\d{2}\\)?\\s)?(\\d{4,5}\\d{4})"
+            return "(\\(?\\d{2}\\)?\\s)?(\\d{4,5}\\-\\d{4})"
         }
     }
     

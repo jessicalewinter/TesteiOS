@@ -37,8 +37,8 @@ extension SeparatorTableViewCell: ViewCodable {
         NSLayoutConstraint.activate([
             separatorView.heightAnchor.constraint(equalToConstant: 1),
             separatorView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            separatorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            separatorView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            separatorView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            separatorView.trailingAnchor.constraint(equalTo: trailingAnchor),
             separatorView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
         ])
     }

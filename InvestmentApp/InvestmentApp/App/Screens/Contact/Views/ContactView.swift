@@ -42,6 +42,7 @@ class ContactView: UIView {
         floatingTextField.translatesAutoresizingMaskIntoConstraints = false
         floatingTextField.delegate = self
         floatingTextField.keyboardType = .numberPad
+        floatingTextField.inputAccessoryView = toolBar
         return floatingTextField
     }()
     
@@ -58,6 +59,16 @@ class ContactView: UIView {
         button.addTarget(self, action: #selector(pushToDetails), for: .touchUpInside)
         return button
     }()
+    
+    lazy var toolBar: UIToolbar = {
+        let doneToolbar: UIToolbar = UIToolbar(with: "Ok", and: #selector(closePad), with: self)
+        return doneToolbar
+    }()
+    
+    @objc func closePad() {
+        verifyValidate()
+        phoneField.resignFirstResponder()
+    }
         
     init() {
         super.init(frame: .zero)
@@ -173,6 +184,20 @@ extension ContactView: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.activeTextField = nil
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == phoneField {
+            var fullString = textField.text ?? ""
+            fullString.append(string)
+            if range.length == 1 {
+                textField.text = MaskText.format(phoneNumber: fullString, shouldRemoveLastDigit: true)
+            } else {
+                textField.text = MaskText.format(phoneNumber: fullString)
+            }
+            return false
+        }
+        return true
     }
     
     func verifyValidate() {
